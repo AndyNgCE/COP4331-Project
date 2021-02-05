@@ -43,7 +43,7 @@ Andy Nguyen - Buy a PC to run Unreal Engine; Download the Unreal Engine; Downloa
 
 Gabriel Barcenas - Downloaded Epic Game Launcher, Unreal Engine 4, and Visual Studio 2021
 
-Tevfik Koyun - 
+Tevfik Koyun - Downloaded Unreal Engine 4,Epic Game Launcher and Visual Studio 2021.
 
 Jordan Edelman - 
 
