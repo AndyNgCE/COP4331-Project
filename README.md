@@ -37,13 +37,13 @@ Andy Nguyen
 [Velocity Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)
 
 # Task Allocation
-Zach - \
+Zach -
 
-Andy Nguyen - Buy a PC to run Unreal Engine; Download the Unreal Engine; Download Visual Studio and Visual Studio Code\
+Andy Nguyen - Buy a PC to run Unreal Engine; Download the Unreal Engine; Download Visual Studio and Visual Studio Code
 
-Gabriel Barcenas - Downloaded Epic Game Launcher, Unreal Engine 4, and Visual Studio 2021\
+Gabriel Barcenas - Downloaded Epic Game Launcher, Unreal Engine 4, and Visual Studio 2021
 
-Tevfik Koyun - \
+Tevfik Koyun - 
 
 Jordan Edelman - 
 
