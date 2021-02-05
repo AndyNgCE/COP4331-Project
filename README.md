@@ -45,7 +45,7 @@ Gabriel Barcenas - Downloaded Epic Game Launcher, Unreal Engine 4, and Visual St
 
 Tevfik Koyun - Downloaded Unreal Engine 4,Epic Game Launcher and Visual Studio 2021.
 
-Jordan Edelman - 
+Jordan Edelman - Downloaded Unreal Engine 4,Epic Game Launcher and Visual Studio 2021.
 
 # Sprint 2
 
