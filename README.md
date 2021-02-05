@@ -38,13 +38,11 @@ Andy Nguyen
 
 # Task Allocation
 Zach - \
-<<<<<<< HEAD
-Andy Nguyen - Buy a PC to run Unreal Engine; Download the Unreal Engine; Download Visual Studio and Visual Studio Code\
-Gabriel Barcenas - \
 =======
-Andy Nguyen - \
+Andy Nguyen - Buy a PC to run Unreal Engine; Download the Unreal Engine; Download Visual Studio and Visual Studio Code\
+
 Gabriel Barcenas - Downloaded Epic Game Launcher, Unreal Engine 4, and Visual Studio 2021\
->>>>>>> e10a20712a9a53d134304bacd0ead64f72a07e83
+
 Tevfik Koyun - \
 Jordan Edelman - 
 
