@@ -39,7 +39,7 @@ Andy Nguyen
 # Task Allocation
 Zach - \
 Andy Nguyen - \
-Gabriel Barcenas - \
+Gabriel Barcenas - Downloaded Epic Game Launcher, Unreal Engine 4, and Visual Studio 2021\
 Tevfik Koyun - \
 Jordan Edelman - \
 
