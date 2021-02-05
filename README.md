@@ -30,11 +30,11 @@ Zach\
 Andy Nguyen
 
 # Sprint 1
-[Product Backlog]  (https://trello.com/b/QNCct5eq/king-of-bombs)\
-[Sprint Backlog]  (https://trello.com/b/QNCct5eq/king-of-bombs)\
-[Requirements]  (https://trello.com/b/QNCct5eq/king-of-bombs)\
-[Burndown Chart]  (https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)\
-[Velocity Chart]  (https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)\
+[Product Backlog](https://trello.com/b/QNCct5eq/king-of-bombs) \
+[Sprint Backlog](https://trello.com/b/QNCct5eq/king-of-bombs) \
+[Requirements](https://trello.com/b/QNCct5eq/king-of-bombs) \
+[Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026) \
+[Velocity Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)
 
 # Task Allocation
 Zach - Bomb spawning/Character movement\
