@@ -38,10 +38,10 @@ Andy Nguyen
 
 # Task Allocation
 Zach - \
-Andy Nguyen - \
+Andy Nguyen - Buy a PC to run Unreal Engine; Download the Unreal Engine; Download Visual Studio and Visual Studio Code\
 Gabriel Barcenas - \
 Tevfik Koyun - \
-Jordan Edelman - \
+Jordan Edelman - 
 
 # Sprint 2
 
