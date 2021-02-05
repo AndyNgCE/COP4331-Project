@@ -37,11 +37,11 @@ Andy Nguyen
 [Velocity Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)
 
 # Task Allocation
-Zach - Bomb spawning/Character movement\
-Andy Nguyen - Bomb spawning/Character movement\
-Gabriel Barcenas - Bomb spawning/Character movement\
-Tevfik Koyun - Bomb spawning/Character movement\
-Jordan Edelman - Bomb spawning/Character movement
+Zach - \
+Andy Nguyen - \
+Gabriel Barcenas - \
+Tevfik Koyun - \
+Jordan Edelman - \
 
 # Sprint 2
 
