@@ -1,7 +1,7 @@
 # COP4331-Project
 This is the repository for the COP4331 game!
 
-Project Proposal:
+# Project Vision:
 For players looking to experience a new twist in a tried and true game
 formula and miss simplistic, explosive, and thrill inducing gameplay that
 retro games offered. Our game, "King of the Bomb",
@@ -21,3 +21,52 @@ effects appear real with a slight modification to their appearances.
 Blowing someone up is bound to create a vengeful wraith,
 so why not get your revenge by scaring your friends? Eliminate everyone and become the
 King of Bombs!
+
+# Team Members
+Jordan Edelman
+Gaberiel Barcenas
+Tevfik Koyun
+Zach
+Andy Nguyen
+
+# Sprint 1
+Product Backlog (https://trello.com/b/QNCct5eq/king-of-bombs)
+Sprint Backlog (https://trello.com/b/QNCct5eq/king-of-bombs)
+Requirements (https://trello.com/b/QNCct5eq/king-of-bombs)
+Burndown Chart (https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)
+Velocity Chart (https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)
+
+# Task Allocation
+Zach - Bomb spawning/Character movement
+Andy Nguyen - Bomb spawning/Character movement
+Gabriel Barcenas - Bomb spawning/Character movement
+Tevfik Koyun - Bomb spawning/Character movement
+Jordan Edelman - Bomb spawning/Character movement
+
+# Sprint 2
+
+# Task Allocation
+
+# Sprint 3
+
+# Task Allocation
+
+# Sprint 4
+
+# Task Allocation
+
+# Sprint 5
+
+# Task Allocation
+
+# Sprint 6
+
+# Task Allocation
+
+# Sprint 7
+
+# Task Allocation
+
+# Sprint 8
+
+# Task Allocation
