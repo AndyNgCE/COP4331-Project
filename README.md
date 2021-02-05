@@ -38,12 +38,13 @@ Andy Nguyen
 
 # Task Allocation
 Zach - \
-=======
+
 Andy Nguyen - Buy a PC to run Unreal Engine; Download the Unreal Engine; Download Visual Studio and Visual Studio Code\
 
 Gabriel Barcenas - Downloaded Epic Game Launcher, Unreal Engine 4, and Visual Studio 2021\
 
 Tevfik Koyun - \
+
 Jordan Edelman - 
 
 # Sprint 2
