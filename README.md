@@ -26,7 +26,7 @@ King of Bombs!
 Jordan Edelman\
 Gaberiel Barcenas\
 Tevfik Koyun\
-Zach\
+Zach Mallet\
 Andy Nguyen
 
 # Sprint 1
