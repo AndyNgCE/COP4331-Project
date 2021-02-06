@@ -37,7 +37,7 @@ Andy Nguyen
 [Velocity Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)
 
 # Task Allocation
-Zach -
+Zach - Gave initial workshop on basics of Unreal Engine. Working on initial project push and setup.
 
 Andy Nguyen - Buy a PC to run Unreal Engine; Download the Unreal Engine; Download Visual Studio and Visual Studio Code
 
