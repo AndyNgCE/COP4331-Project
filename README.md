@@ -48,8 +48,24 @@ Tevfik Koyun - Downloaded Unreal Engine 4,Epic Game Launcher and Visual Studio 2
 Jordan Edelman - Downloaded Unreal Engine 4,Epic Game Launcher and Visual Studio 2021.
 
 # Sprint 2
+[Product Backlog](https://trello.com/b/QNCct5eq/king-of-bombs) \
+[Sprint Backlog](https://trello.com/b/QNCct5eq/king-of-bombs) \
+[Requirements](https://trello.com/b/QNCct5eq/king-of-bombs) \
+[Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026) \
+[Velocity Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)\
+[Design Document]()\
+[Demonstration]()
 
 # Task Allocation
+Zach - Ghost.cpp; Character.cpp
+
+Andy Nguyen - Power-up.cpp
+
+Gaberial Barcenas - Bomb.cpp
+
+Tevfik Koyun - Block.cpp
+
+Jordan Edelman - Hazards.cpp
 
 # Sprint 3
 
