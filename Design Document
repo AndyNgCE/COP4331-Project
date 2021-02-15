@@ -1,38 +1,63 @@
 # Program Organization
-You should have your context, container, and component (c4model.com) diagrams in this section, along with a description and explanation of each diagram and a table that relates each block to one or more user stories.\
+
 
 # Code Design
-You should have your UML Class diagram and any other useful UML diagrams in this section. Each diagram should be accompanied by a brief description explaining what the elements are and why they are in the diagram. For your class diagram, you must also include a table that relates each class to one or more user stories.\
+Classes:
+
+Bomb.cpp
+  The abstract class for the bomb.
+Player.cpp
+  Class for the player.
+Ghost.cpp
+  Class for the dead player.
+PlayerController.cpp
+  Controller responsible for spawning player and ghost.
+ KingOfBombsCharacter.cpp
+  abstract class for player movement and camera.
+Hazard.cpp
+  The abstract class for any map hazards.
+PowerUp.cpp
+  The abstract class for powerups.
+Block.cpp
+  The abstract class for the blocks the map will be made out of.
 
 # Data Design
-If you are using a database, you should have a basic Entity Relationship Diagram (ERD) in this section. This diagram should describe the tables in your database and their relationship to one another (especially primary/foreign keys), including the columns within each table.\
-
+n/a
 # Business Rules
+n/a
 
 # User Interface Design
-You should have one or more user interface screens in this section. Each screen should be accompanied by an explaination of the screens purpose and how the user will interact with it. You should relate each screen to one another as the user transitions through the states of your application. You should also have a table that relates each window or component to the support using stories.\
+UI TBD
 
 # Resource Management
+Unreal Engine has a built in garbage collector.
 
 # Security
-
+n/a
 # Interoperability
+Compiled into binaries for game. Harder to mess with.
 
 # Internationalization/Localization
+n/a
 
 # Input/Output
+Input handled by UE4
 
 # Error Processing
+n/a
 
 # Fault Tolerance
+n/a
 
 # Architectural Feasibility
 
 # Overengineering
 
 # Build-vs-Buy Decisions
-This section should list the third party libraries your system is using and describe what those libraries are being used for.\
+n/a
 
 # Reuse
+n/a
 
 # Change Stategy
+Prototype first with Blueprint Implement with C++ if it passes testing.
