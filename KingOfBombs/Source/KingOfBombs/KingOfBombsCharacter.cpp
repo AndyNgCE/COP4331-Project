@@ -74,6 +74,13 @@ void AKingOfBombsCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 
 	// VR headset functionality
 	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AKingOfBombsCharacter::OnResetVR);
+
+	PlayerInputComponent->BindAction("SpawnBomb", IE_Pressed, this, &AKingOfBombsCharacter::SpawnBomb);
+}
+
+void AKingOfBombsCharacter::SpawnBomb()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Spawning Bomb"));
 }
 
 

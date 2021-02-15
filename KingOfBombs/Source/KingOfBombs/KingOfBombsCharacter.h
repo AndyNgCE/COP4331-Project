@@ -68,5 +68,17 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+
+
+	int Lives = 3;
+	int Health = 100;
+
+	//stats
+	int MovementSpeed = 300;
+
+	void SpawnBomb();
+
+	//void ComsumePowerUp(TSubClassOf<APowerUp> PowerUpClass);
 };
 
