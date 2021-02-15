@@ -3,3 +3,9 @@
 
 #include "KBPlayerController.h"
 
+void AKBPlayerController::SpawnAndPossesGhost()
+{
+}
+void AKBPlayerController::SpawnAndPossesPlayer()
+{
+}
