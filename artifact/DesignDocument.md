@@ -1,11 +1,29 @@
 # Program Organization
 
+# System Context Diagram
+![System Context Diagram](https://user-images.githubusercontent.com/71106921/108025748-0c5ca180-6ff5-11eb-869c-7ea994bc655c.jpeg)
+
+# Container Diagram
+![Container Diagram](https://user-images.githubusercontent.com/71106921/108025767-1aaabd80-6ff5-11eb-9e6b-5195bc6315cd.jpeg)
+
+# Component Diagram
+![Component Diagram](https://user-images.githubusercontent.com/71106921/108025776-21d1cb80-6ff5-11eb-993f-6771bb6ccdce.jpeg)
+
+# Class Diagram
+![Class Diagram](https://user-images.githubusercontent.com/71106921/108025845-3ca44000-6ff5-11eb-9007-f1229ed91565.jpeg)
+
+# Activity Diagram
+![Activity Diagram](https://user-images.githubusercontent.com/71106921/108025801-2ac29d00-6ff5-11eb-864d-8ed044fbba00.jpeg)
+
+# Sequence Diagram
+[Sequence Diagram.pdf](https://github.com/AndyNgCE/COP4331-Project/files/5986521/Sequence.Diagram.pdf)
+
+# ER Diagram
+
 # URL Mock-Up and Diagram
 ![KingOfBombsUIStart](https://user-images.githubusercontent.com/71106921/108016462-91898b80-6fe0-11eb-98a6-389839f739b3.png)
 
 ![InGameView](https://user-images.githubusercontent.com/71106921/108016477-9d754d80-6fe0-11eb-9387-b51e4690b086.png)
-
-
 
 
 # Code Design
@@ -29,42 +47,46 @@ Block.cpp
   The abstract class for the blocks the map will be made out of.
 
 # Data Design
-n/a
+
+
 # Business Rules
-n/a
+
 
 # User Interface Design
-UI TBD
+UI TBD 
 
 # Resource Management
 Unreal Engine has a built in garbage collector.
 
 # Security
-n/a
+
+
 # Interoperability
 Compiled into binaries for game. Harder to mess with.
 
 # Internationalization/Localization
-n/a
+
 
 # Input/Output
 Input handled by UE4
 
 # Error Processing
-n/a
+
 
 # Fault Tolerance
-n/a
+
 
 # Architectural Feasibility
 
+
 # Overengineering
 
+
 # Build-vs-Buy Decisions
-n/a
+
 
 # Reuse
-n/a
+
 
 # Change Stategy
 Prototype first with Blueprint Implement with C++ if it passes testing.
