@@ -14,7 +14,7 @@ Our menu UI is the first thing any player will see, with this in mind we designe
 
 # Class Diagram
 ![Class Diagram](https://user-images.githubusercontent.com/71106921/108025845-3ca44000-6ff5-11eb-9007-f1229ed91565.jpeg)
-The classes central to our games implementaion and their hierarchy are outlined here.
+The classes central to our games implementaion and their hierarchy are outlined here.<br />
 User story relations: PowerUp[4] - Bomb[2] - Player[1] - Hazard[5] - Block[3]
 
 # Activity Diagram
