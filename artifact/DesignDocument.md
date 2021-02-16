@@ -28,8 +28,19 @@ User story relations: PowerUp[4] - Bomb[2] - Player[1] - Hazard[5] - Block[3]
 
 # URL Mock-Up and Diagram
 ![KingOfBombsUIStart](https://user-images.githubusercontent.com/71106921/108016462-91898b80-6fe0-11eb-98a6-389839f739b3.png)
+This Depicts the UI for the beginning of the game as of now. It gives the player straightforward options for now to initiate play, manipulate the game settings, close the application, and to find information on the game.
+
+![KingOfBombsUISettings](https://user-images.githubusercontent.com/71106921/108136062-48d8dd80-7087-11eb-924d-9d47908ba346.png)
+Dependent on the option the user chooses, this is the UI for the settings menu which can be accessed directly from the menu or from selecting the play component and selecting settings there.
+
+![TutorialUI](https://user-images.githubusercontent.com/71106921/108135766-b7696b80-7086-11eb-80ac-ca4078cff707.png)
+The tutorial UI will show print information onto the screen as well as models of elements in the game to help new players learn hoow to play. Its being considered if a special button should be implemented to load a special map that can help in teaching players.
+
+![PlayUI](https://user-images.githubusercontent.com/71106921/108135747-ab7da980-7086-11eb-8d93-d8b656cc82af.png)
+This is the UI vefore starting the game. Although not depicted yet, its considered if "playmodes" should be added here so player can choose game mode an add vareity to their games. 
 
 ![InGameView](https://user-images.githubusercontent.com/71106921/108016477-9d754d80-6fe0-11eb-9387-b51e4690b086.png)
+This is the first-person view all players will see while on the map. The gray object on the left and right will be the blocks players can destroy. The players cannot break the "wall" blocks to exit the map. The view will also be similar to for "Ghost" players as well.
 
 
 # Code Design
