@@ -1,7 +1,7 @@
 # Program Organization
 
 # URL Mock-Up and Diagram
-![Game Start UI](KingOfBombsUIStart.png)
+![Game Start UI](/Users/andyn/OneDrive/Desktop/KingOfBombsUIStart.png)
 
 ![In-Game Player view](InGameView.png)
 
