@@ -16,7 +16,7 @@
 ![Activity Diagram](https://user-images.githubusercontent.com/71106921/108025801-2ac29d00-6ff5-11eb-864d-8ed044fbba00.jpeg)
 
 # Sequence Diagram
-[Sequence Diagram.pdf](https://github.com/AndyNgCE/COP4331-Project/files/5986521/Sequence.Diagram.pdf)
+![Sequence Diagram-page-001](https://user-images.githubusercontent.com/71106921/108026279-0a471280-6ff6-11eb-81d7-85ad1b605b7d.jpg)
 
 # ER Diagram
 
