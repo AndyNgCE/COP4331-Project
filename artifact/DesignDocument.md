@@ -1,9 +1,10 @@
 # Program Organization
 
 # URL Mock-Up and Diagram
-![Game Start UI](/Users/andyn/OneDrive/Desktop/KingOfBombsUIStart.png)
+![KingOfBombsUIStart](https://user-images.githubusercontent.com/71106921/108016462-91898b80-6fe0-11eb-98a6-389839f739b3.png)
 
-![In-Game Player view](InGameView.png)
+![InGameView](https://user-images.githubusercontent.com/71106921/108016477-9d754d80-6fe0-11eb-9387-b51e4690b086.png)
+
 
 
 
