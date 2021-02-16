@@ -1,9 +1,9 @@
 # Program Organization
 
 # URL Mock-Up and Diagram
-[Game Start UI](https://ibb.co/Qj3Sjt2)\
+![Game Start UI](https://ibb.co/Qj3Sjt2)
 
-[In-Game Player view](https://ibb.co/WHzBSfJ)\
+![In-Game Player view](https://ibb.co/WHzBSfJ)
 
 
 
