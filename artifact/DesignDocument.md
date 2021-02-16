@@ -19,7 +19,7 @@ User story relations: PowerUp[4] - Bomb[2] - Player[1] - Hazard[5] - Block[3]
 
 # Activity Diagram
 ![Activity Diagram](https://user-images.githubusercontent.com/71106921/108025801-2ac29d00-6ff5-11eb-864d-8ed044fbba00.jpeg)
-The basic paths the user can take through our system, several loops stemming from the menu UI include: the tutorial, game settings, and the game itself.
+<br />The basic paths the user can take through our system, several loops stemming from the menu UI include: the tutorial, game settings, and the game itself.
 
 # Sequence Diagram
 ![Sequence Diagram-page-001](https://user-images.githubusercontent.com/71106921/108026279-0a471280-6ff6-11eb-81d7-85ad1b605b7d.jpg)
