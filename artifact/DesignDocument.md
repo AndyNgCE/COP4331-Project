@@ -6,15 +6,20 @@ Since our goal is to support 2-4 players in the game while on one screen, there 
 
 # Container Diagram
 ![Container Diagram](https://user-images.githubusercontent.com/71106921/108025767-1aaabd80-6ff5-11eb-9e6b-5195bc6315cd.jpeg)
+As our game runs using the Unreal Engine, most of the heavy lifting is done there. The loop our applications will run in is descibed here as well.
 
 # Component Diagram
 ![Component Diagram](https://user-images.githubusercontent.com/71106921/108025776-21d1cb80-6ff5-11eb-993f-6771bb6ccdce.jpeg)
+Our menu UI is the first thing any player will see, with this in mind we designed it to be easy to understand and familiar.
 
 # Class Diagram
 ![Class Diagram](https://user-images.githubusercontent.com/71106921/108025845-3ca44000-6ff5-11eb-9007-f1229ed91565.jpeg)
+The classes central to our games implementaion and their hierarchy are outlined here.
+User story relations: PowerUp[4] - Bomb[2] - Player[1] - Hazard[5] - Block[3]
 
 # Activity Diagram
 ![Activity Diagram](https://user-images.githubusercontent.com/71106921/108025801-2ac29d00-6ff5-11eb-864d-8ed044fbba00.jpeg)
+The basic paths the user can take through our system, several loops stemming from the menu UI include: the tutorial, game settings, and the game itself.
 
 # Sequence Diagram
 ![Sequence Diagram-page-001](https://user-images.githubusercontent.com/71106921/108026279-0a471280-6ff6-11eb-81d7-85ad1b605b7d.jpg)
