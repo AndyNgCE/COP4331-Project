@@ -53,7 +53,7 @@ Jordan Edelman - Downloaded Unreal Engine 4,Epic Game Launcher and Visual Studio
 [Requirements](https://trello.com/b/QNCct5eq/king-of-bombs) \
 [Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026) \
 [Velocity Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)\
-[Design Document](https://github.com/AndyNgCE/COP4331-Project/blob/main/Design%20Document)\
+[Design Document](https://github.com/AndyNgCE/COP4331-Project/blob/main/artifact/DesignDocument.md)\
 [Demonstration](https://www.youtube.com/watch?v=WkznemdsAzA)
 
 # Task Allocation
