@@ -34,18 +34,18 @@ Andy Nguyen
 [Sprint Backlog](https://trello.com/b/QNCct5eq/king-of-bombs) \
 [Requirements](https://trello.com/b/QNCct5eq/king-of-bombs) \
 [Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026) \
-[Velocity Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)
+[Velocity Chart](https://docs.google.com/spreadsheets/d/1KRNAfiRvPILEtd5-9JKQYyp52EXsUcwrr4NSR5S0dHY/edit#gid=0)
 
 # Task Allocation
-Zach - Gave initial workshop on basics of Unreal Engine. Working on initial project push and setup.
+Zach (ZachKuj) - Gave initial workshop on basics of Unreal Engine. Working on initial project push and setup.
 
-Andy Nguyen - Buy a PC to run Unreal Engine; Download the Unreal Engine; Download Visual Studio and Visual Studio Code
+Andy Nguyen (AndyNgCE) - Buy a PC to run Unreal Engine; Download the Unreal Engine; Download Visual Studio and Visual Studio Code
 
-Gabriel Barcenas - Downloaded Epic Game Launcher, Unreal Engine 4, and Visual Studio 2021
+Gabriel Barcenas (Gbarc1002) - Downloaded Epic Game Launcher, Unreal Engine 4, and Visual Studio 2021
 
-Tevfik Koyun - Downloaded Unreal Engine 4,Epic Game Launcher and Visual Studio 2021.
+Tevfik Koyun (tevfikkoyun) - Downloaded Unreal Engine 4,Epic Game Launcher and Visual Studio 2021.
 
-Jordan Edelman - Downloaded Unreal Engine 4,Epic Game Launcher and Visual Studio 2021.
+Jordan Edelman (Joredelma) - Downloaded Unreal Engine 4,Epic Game Launcher and Visual Studio 2021.
 
 # Sprint 2
 
