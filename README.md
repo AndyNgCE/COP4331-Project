@@ -35,7 +35,7 @@ Andy Nguyen
 [Requirements](https://trello.com/b/QNCct5eq/king-of-bombs) \
 [Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026) \
 [Velocity Chart](https://docs.google.com/spreadsheets/d/1KRNAfiRvPILEtd5-9JKQYyp52EXsUcwrr4NSR5S0dHY/edit#gid=0)
-
+ 
 # Task Allocation
 Zach (ZachKuj) - Gave initial workshop on basics of Unreal Engine. Working on initial project push and setup.
 
