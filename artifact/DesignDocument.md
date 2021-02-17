@@ -133,11 +133,7 @@ Our error handling will be detective and passive. An single error message will b
 In the case of finding an error, or fault, through scanning for the presence of needed file in the system, the game will automatically terminate and clear all data as if the game had been normally exited. This is to avoid causing errors in the game's running functionality and related data structures in other future instances of the game.
 
 # Architectural Feasibility
-<<<<<<< Updated upstream
-Given our games scale there should be no problems here, if however the amount of objects spawned by players can impact performance we will cap the maximum amount allowed.
-=======
-Unreal Engine as a game developement enviroment that can implement blueprint, or rough versions, the game prior to the coding of the game. This allows for the testing of concepts in terms of gameplay and implementation of code prior to creation of the offical product, in other words, the game. It also works to see if the engine can handle such concepts.
->>>>>>> Stashed changes
+Given our games scale there should be no problems here, if however the amount of objects spawned by players can impact performance we will cap the maximum amount allowed. Unreal Engine as a game developement enviroment that can implement blueprint, or rough versions, the game prior to the coding of the game. This allows for the testing of concepts in terms of gameplay and implementation of code prior to creation of the offical product, in other words, the game. It also works to see if the engine can handle such concepts.
 
 # Overengineering
 Any objects detected outside of the intended game world will be deleted to allow the game to continue.
