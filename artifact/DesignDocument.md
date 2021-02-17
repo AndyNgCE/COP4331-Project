@@ -15,7 +15,7 @@ Our menu UI is the first thing any player will see, with this in mind we designe
 # Code Design
 
 ## Class Diagram
-![Class Diagram (1)](https://user-images.githubusercontent.com/71106921/108142344-96f3de00-7093-11eb-89f7-e2db09f8747c.jpeg)
+![Class Diagram (1)](https://user-images.githubusercontent.com/71106921/108143609-14b8e900-7096-11eb-931c-dbbe02d15bfe.jpeg)
 The user(s) will need to have access to the player's data such health, possibly lives, bomb availability, and the Power-ups that their character has collected. While this is stored in the player class, it must make calls to the Bomb and Power-up classes in order to calculate hits an effects. The same logic applies to the Hazard class when the player collides with an element designated a "Hazard". The block class is seperated as it does not have a direct affect on the player class, however, it block movement of the player and players MUST NOT be able to pass through them.
 Classes | User Story ID 
 --------|--------------
