@@ -6,10 +6,10 @@ Since our goal is to support 2-4 players in the game while on one screen, there 
 
 Context | User Story ID 
 --------|--------------
-King of Bombs User | 01 - 14
-King of Bomb.exe | 1, 6, 10, 2, 11
+King of Bombs User | 1 - 14
+King of Bomb.exe | 1, 6 , 10 , 2 , 11
 King of Bombs System | 1 - 14
-Unreal Engine | 1, 3, 4, 13
+Unreal Engine | 1, 3 , 4 , 13
 
 ## Container Diagram
 ![Container Diagram](https://user-images.githubusercontent.com/71106921/108025767-1aaabd80-6ff5-11eb-9e6b-5195bc6315cd.jpeg)
@@ -18,10 +18,10 @@ With a more in-depth look into the King of Bombs system, the user accesses the K
 Container | User Story ID 
 ----------|--------------
 King Of Bombs User | 1 - 13
-King Of Bomb.exe | 1, 2, 6 , 10 , 11
+King Of Bomb.exe | 1, 2 , 6 , 10 , 11
 Game Application | 1, 2 , 9 , 12
 Main Menu Application |10 , 11 , 13 
-Game Data Application | 8, 9
+Game Data Application | 8 , 9
 Unreal Engine | 1, 3 , 4 , 13
 
 ## Component Diagram
@@ -36,8 +36,8 @@ Tutorial Compoment | 6 , 10
 Play Component | 1-13
 Quit Component | 14 
 Main Game Component | 2, 3 , 4 , 5 , 7 , 8 
-Unreal Engine | 1, 3, 4, 13 
-Screen Application | 1,9 
+Unreal Engine | 1, 3 , 4 , 13 
+Screen Application | 1, 9 
 
 # Code Design
 
@@ -47,8 +47,8 @@ The user(s) will need to have access to the player's data such health, possibly 
 
 Classes | User Story ID 
 --------|--------------
-PowerUp | 4, 7
-Bomb | 7, 5, 2
+PowerUp | 4 , 7
+Bomb | 7, 5 , 2
 Player | 1, 9, 8, 2
 Hazard | 3, 5
 Block | 3, 5
