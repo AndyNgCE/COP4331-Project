@@ -2,7 +2,7 @@
 
 ## System Context Diagram
 ![System Context Diagram](https://user-images.githubusercontent.com/71106921/108025748-0c5ca180-6ff5-11eb-869c-7ea994bc655c.jpeg)
-Since our goal is to support 2-4 players in the game while on one screen, there is not much complexity on this level. All inputs will be read and processed through one machine. It is just a link between the user(s), King of Bombe excutable, its related system, and external use of the Unreal Engine.
+Since our goal is to support 2-4 players in the game while on one screen, there is not much complexity on this level. All inputs will be read and processed through one machine. It depicts the link between the user(s), King of Bombe excutable, its related system, and external use of the Unreal Engine.
 
 Context | User Story ID 
 --------|--------------
@@ -100,9 +100,16 @@ Hazard | 003, 005
 Block | 003, 005
 
 # Business Rules
+User(s), players, should have responsive controls with accurate data reflecting their stats in game that take affect as soon as they are changed. The controls from a keyboard should not be lagged in anyway or altered unless due to an effect of a Power-up or other intended/purposeful manipulations of the controls.
+
+The game must be "fun" with interesting maps, Power-ups, and hazards. As such, each must be implemented correctly, impact the user in a meaningful way with stats and environement, and have unique placements. The elements mentioned must quickly affect the player's data on contact with them.
+
+A user should be able to see their "progress" in a chain of games. In other words, a leaderboard recording results from current an pass games should exist for that instance of King of Bombs. The data of "kills" and "deaths" needs to be stored somewhere for reference.
 
 # Resource Management
-Unreal Engine has a built in garbage collector.
+Expected resources needed in most cases: CPU, RAM, stoarge memory, power, monitor, and a keyboard.
+ 
+As the game runs on the Unreal Engine for physics, assests, and libaries an installer may be implemented to allow the game to run on the user's device. Beyond this, the implemntation of the code through C++ means that the data structures containing leaderboard data, player data, and setting data must have the memory space to store the them and must also be freed upon termination of the game. Unreal Engine has an inbuilt garbage collector function that should limit the game from consumming to many resources from the computer. If the game begins to consume to many resouces an the user device begin to slow down as a result in the most extreme case, then the program should be easily terminated and still free the ealier mentioned data.
 
 # Security
 Users should not be able to modify any code in the executable. Leaderboad scores will also be inaccessable beyond veiwing.
@@ -111,22 +118,26 @@ Users should not be able to modify any code in the executable. Leaderboad scores
 We expect our game to run smoothly as we are using a trusted developement environment (Unreal Engine) and our games use of resources is fairly small.
 
 # Interoperability
-Compiled into binaries for game. Harder to mess with.
+The game will not be sharing data with other software or hardware.
 
 # Internationalization/Localization
 There is no plans for localization beyond English.
 
 # Input/Output
-Input handled by UE4
+The current projected I/O scheme for the game's achitecture follows a look-ahead scheme and detects them at the file level.
 
 # Error Processing
 Our error handling will be detective and passive. An single error message will be displayed giving any information relating to the error. The game system will then free all data structures relating to the game settings, current leaderboard, and player stats. Unreal Engine may have some exeption-proccessing of its own that we will let run, we will still include ours.
 
 # Fault Tolerance
-
+In the case of finding an error, or fault, through scanning for the presence of needed file in the system, the game will automatically terminate and clear all data as if the game had been normally exited. This is to avoid causing errors in the game's running functionality and related data structures in other future instances of the game.
 
 # Architectural Feasibility
+<<<<<<< Updated upstream
 Given our games scale there should be no problems here, if however the amount of objects spawned by players can impact performance we will cap the maximum amount allowed.
+=======
+Unreal Engine as a game developement enviroment that can implement blueprint, or rough versions, the game prior to the coding of the game. This allows for the testing of concepts in terms of gameplay and implementation of code prior to creation of the offical product, in other words, the game. It also works to see if the engine can handle such concepts.
+>>>>>>> Stashed changes
 
 # Overengineering
 Any objects detected outside of the intended game world will be deleted to allow the game to continue.
@@ -135,7 +146,7 @@ Any objects detected outside of the intended game world will be deleted to allow
 Unreal Engine is very robust and very free making it a high value resource, we chose to code most of our own classes for our game rather than purchase assets from a marketplace.
 
 # Reuse
-
+The use of the Unreal Engine warrants the need to create an installer for the game possibly. As it is a driving force for physics in the game, the software will be extensivley resued to test code, blueprints, concepts, and to run the finished game upon completion. Also, the data structure housing player data will be reused for ghost players as well. The stats will be altered to represent indicate a deceased player an also cause a change in the type of bomb they can spawn. The re-use of basic navigation test maps, bomb test maps, hazard filled test maps, and Power-up test maps will be used in order to make ensure new additions of code do not break, alter, or hamper any core features.
 
 # Change Stategy
 Our player class can interact with multiple other interfaces, these interfaces should allow us the flexibility we need to create new features.
