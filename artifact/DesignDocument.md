@@ -105,31 +105,34 @@ Block | 003, 005
 Unreal Engine has a built in garbage collector.
 
 # Security
+Users should not be able to modify any code in the executable. Leaderboad scores will also be inaccessable beyond veiwing.
 
+# Performance
+We expect our game to run smoothly as we are using a trusted developement environment (Unreal Engine) and our games use of resources is fairly small.
 
 # Interoperability
 Compiled into binaries for game. Harder to mess with.
 
 # Internationalization/Localization
-
+There is no plans for localization beyond English.
 
 # Input/Output
 Input handled by UE4
 
 # Error Processing
-
+Our error handling will be detective and passive. An single error message will be displayed giving any information relating to the error. The game system will then free all data structures relating to the game settings, current leaderboard, and player stats. Unreal Engine may have some exeption-proccessing of its own that we will let run, we will still include ours.
 
 # Fault Tolerance
 
 
 # Architectural Feasibility
-
+Given our games scale there should be no problems here, if however the amount of objects spawned by players can impact performance we will cap the maximum amount allowed.
 
 # Overengineering
-
+Any objects detected outside of the intended game world will be deleted to allow the game to continue.
 
 # Build-vs-Buy Decisions
-
+Unreal Engine is very robust and very free making it a high value resource, we chose to code most of our own classes for our game rather than purchase assets from a marketplace.
 
 # Reuse
 
