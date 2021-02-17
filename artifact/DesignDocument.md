@@ -2,7 +2,7 @@
 
 ## System Context Diagram
 ![System Context Diagram](https://user-images.githubusercontent.com/71106921/108025748-0c5ca180-6ff5-11eb-869c-7ea994bc655c.jpeg)
-Since our goal is to support 2-4 players in the game while on one screen, there is not much complexity on this level. All inputs will be read and processed through one machine. It is just a link between the user(s) and the computer.
+Since our goal is to support 2-4 players in the game while on one screen, there is not much complexity on this level. All inputs will be read and processed through one machine. It is just a link between the user(s), King of Bombe excutable, its related system, and external use of the Unreal Engine.
 
 Context | User Story ID 
 --------|--------------
@@ -13,11 +13,11 @@ Unreal Engine | 01, 03, 04, 013
 
 ## Container Diagram
 ![Container Diagram](https://user-images.githubusercontent.com/71106921/108025767-1aaabd80-6ff5-11eb-9e6b-5195bc6315cd.jpeg)
-As our game runs using the Unreal Engine, most of the heavy lifting is done there. The loop our applications will run in is descibed here as well.
+With a more in-depth look into the King of Bombs system, the user accesses the King of Bombs system through the King of Bomb.exe and starts with the Main Menu Application where the intial user inputs are collected and pushed into the Game Data Application. Now, this section is primarliy in charge of changing settings and stats to meet the user demand/input. It is also considered the process where assest and libaries are imported from Unreal Engine to run the game. This is then reflected in the game Application which is essentially the outputting of the game to the screen with the maps, player models, and associated elements.
 
 ## Component Diagram
 ![Component Diagram](https://user-images.githubusercontent.com/71106921/108025776-21d1cb80-6ff5-11eb-993f-6771bb6ccdce.jpeg)
-Our menu UI is the first thing any player will see, with this in mind we designed it to be easy to understand and familiar.
+Our menu UI is the first thing any player will see, with this in mind we designed it to be easy to understand and navigate. This diagram illustrates the different components each button of the inital UI will call and interface with in order to help the user navigate from and to the game.
 
 # Code Design
 
@@ -36,10 +36,12 @@ Block | 003, 005
 
 ## Activity Diagram
 ![Activity Diagram](https://user-images.githubusercontent.com/71106921/108025801-2ac29d00-6ff5-11eb-864d-8ed044fbba00.jpeg)
-<br />The basic paths the user can take through our system, several loops stemming from the menu UI include: the tutorial, game settings, and the game itself.
+<br />
+The basic paths the user can take through our system, several loops stemming from the menu UI include: the tutorial, game settings, and the game itself.
 
 ## Sequence Diagram
 ![Sequence Diagram-page-001](https://user-images.githubusercontent.com/71106921/108026279-0a471280-6ff6-11eb-81d7-85ad1b605b7d.jpg)
+This is an extremely simplified representation of how a user can quickly access the game with one or more users. This is following the assumption that a user does not use acess tutorial and uses base settings.
 
 # User Interface Design
 ![KingOfBombsUIStart](https://user-images.githubusercontent.com/71106921/108016462-91898b80-6fe0-11eb-98a6-389839f739b3.png)
@@ -59,6 +61,14 @@ This is the first-person view all players will see while on the map. The gray ob
 
 ![UI diagram](https://user-images.githubusercontent.com/71106921/108139771-c8b67600-708e-11eb-8c16-bb7f0bd70f31.jpeg)
 This is a compresive diagram of how the UI will interact and reach one another.
+
+Classes | User Story ID 
+--------|--------------
+PowerUp | 004, 007
+Bomb | 007, 005, 002
+Player | 001, 009, 008, 002
+Hazard | 003, 005
+Block | 003, 005
 
 # Business Rules
 
