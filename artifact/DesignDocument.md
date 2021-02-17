@@ -1,19 +1,20 @@
-## Program Organization
+# Program Organization
 
-# System Context Diagram
+## System Context Diagram
 ![System Context Diagram](https://user-images.githubusercontent.com/71106921/108025748-0c5ca180-6ff5-11eb-869c-7ea994bc655c.jpeg)
 Since our goal is to support 2-4 players in the game while on one screen, there is not much complexity on this level. All inputs will be read and processed through one machine. It is just a link between the user(s) and the computer.
 
-# Container Diagram
+## Container Diagram
 ![Container Diagram](https://user-images.githubusercontent.com/71106921/108025767-1aaabd80-6ff5-11eb-9e6b-5195bc6315cd.jpeg)
 As our game runs using the Unreal Engine, most of the heavy lifting is done there. The loop our applications will run in is descibed here as well.
 
-# Component Diagram
+## Component Diagram
 ![Component Diagram](https://user-images.githubusercontent.com/71106921/108025776-21d1cb80-6ff5-11eb-993f-6771bb6ccdce.jpeg)
 Our menu UI is the first thing any player will see, with this in mind we designed it to be easy to understand and familiar.
 
-## Code Design
-# Class Diagram
+# Code Design
+
+## Class Diagram
 ![Class Diagram (1)](https://user-images.githubusercontent.com/71106921/108142344-96f3de00-7093-11eb-89f7-e2db09f8747c.jpeg)
 The user(s) will need to have access to the player's data such health, possibly lives, bomb availability, and the Power-ups that their character has collected. While this is stored in the player class, it must make calls to the Bomb and Power-up classes in order to calculate hits an effects. The same logic applies to the Hazard class when the player collides with an element designated a "Hazard". The block class is seperated as it does not have a direct affect on the player class, however, it block movement of the player and players MUST NOT be able to pass through them.
 Classes | User Story ID 
@@ -25,11 +26,11 @@ Hazard |
 Block | 
 
 
-# Activity Diagram
+## Activity Diagram
 ![Activity Diagram](https://user-images.githubusercontent.com/71106921/108025801-2ac29d00-6ff5-11eb-864d-8ed044fbba00.jpeg)
 <br />The basic paths the user can take through our system, several loops stemming from the menu UI include: the tutorial, game settings, and the game itself.
 
-# Sequence Diagram
+## Sequence Diagram
 ![Sequence Diagram-page-001](https://user-images.githubusercontent.com/71106921/108026279-0a471280-6ff6-11eb-81d7-85ad1b605b7d.jpg)
 
 # User Interface Design
