@@ -138,4 +138,4 @@ Unreal Engine is very robust and very free making it a high value resource, we c
 
 
 # Change Stategy
-Prototype first with Blueprint Implement with C++ if it passes testing.
+Our player class can interact with multiple other interfaces, these interfaces should allow us the flexibility we need to create new features.
