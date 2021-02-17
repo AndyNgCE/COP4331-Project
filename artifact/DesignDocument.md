@@ -4,6 +4,13 @@
 ![System Context Diagram](https://user-images.githubusercontent.com/71106921/108025748-0c5ca180-6ff5-11eb-869c-7ea994bc655c.jpeg)
 Since our goal is to support 2-4 players in the game while on one screen, there is not much complexity on this level. All inputs will be read and processed through one machine. It is just a link between the user(s) and the computer.
 
+Context | User Story ID 
+--------|--------------
+King of Bombs User | 001 - 013
+King of Bomb.exe | 001, 006, 010, 002, 11
+King of Bombs System | 001 - 013
+Unreal Engine | 01, 03, 04, 013
+
 ## Container Diagram
 ![Container Diagram](https://user-images.githubusercontent.com/71106921/108025767-1aaabd80-6ff5-11eb-9e6b-5195bc6315cd.jpeg)
 As our game runs using the Unreal Engine, most of the heavy lifting is done there. The loop our applications will run in is descibed here as well.
@@ -17,13 +24,14 @@ Our menu UI is the first thing any player will see, with this in mind we designe
 ## Class Diagram
 ![Class Diagram (1)](https://user-images.githubusercontent.com/71106921/108143609-14b8e900-7096-11eb-931c-dbbe02d15bfe.jpeg)
 The user(s) will need to have access to the player's data such health, possibly lives, bomb availability, and the Power-ups that their character has collected. While this is stored in the player class, it must make calls to the Bomb and Power-up classes in order to calculate hits an effects. The same logic applies to the Hazard class when the player collides with an element designated a "Hazard". The block class is seperated as it does not have a direct affect on the player class, however, it block movement of the player and players MUST NOT be able to pass through them.
+
 Classes | User Story ID 
 --------|--------------
-PowerUp | 04, 
-Bomb | 07, 
-Player | 01,
-Hazard | 
-Block | 
+PowerUp | 004, 007
+Bomb | 007, 005, 002
+Player | 001, 009, 008, 002
+Hazard | 003, 005
+Block | 003, 005
 
 
 ## Activity Diagram
@@ -53,10 +61,6 @@ This is the first-person view all players will see while on the map. The gray ob
 This is a compresive diagram of how the UI will interact and reach one another.
 
 # Business Rules
-
-
-# User Interface Design
-UI TBD 
 
 # Resource Management
 Unreal Engine has a built in garbage collector.
