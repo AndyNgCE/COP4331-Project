@@ -35,7 +35,7 @@ Andy Nguyen
 [Requirements](https://trello.com/b/QNCct5eq/king-of-bombs) \
 [Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026) \
 [Velocity Chart](https://docs.google.com/spreadsheets/d/1KRNAfiRvPILEtd5-9JKQYyp52EXsUcwrr4NSR5S0dHY/edit#gid=0)
- 
+
 # Task Allocation
 Zach (ZachKuj) - Gave initial workshop on basics of Unreal Engine. Working on initial project push and setup.
 
@@ -52,20 +52,20 @@ Jordan Edelman (Joredelma) - Downloaded Unreal Engine 4,Epic Game Launcher and V
 [Sprint Backlog](https://trello.com/b/QNCct5eq/king-of-bombs) \
 [Requirements](https://trello.com/b/QNCct5eq/king-of-bombs) \
 [Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026) \
-[Velocity Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)\
+[Velocity Chart](https://docs.google.com/spreadsheets/d/1KRNAfiRvPILEtd5-9JKQYyp52EXsUcwrr4NSR5S0dHY/edit#gid=0)\
 [Design Document](https://github.com/AndyNgCE/COP4331-Project/blob/main/artifact/DesignDocument.md)\
 [Demonstration](https://www.youtube.com/watch?v=WkznemdsAzA)
 
 # Task Allocation
-Zach - Ghost.cpp; Character.cpp
+Zach (ZachKuj) - Ghost.cpp; Character.cpp
 
-Andy Nguyen - Power-up.cpp
+Andy Nguyen (AndyNgCE) - Power-up.cpp
 
-Gaberial Barcenas - Bomb.cpp
+Gabriel Barcenas (Gbarc1002) - Bomb.cpp
 
-Tevfik Koyun - Block.cpp
+Tevfik Koyun (tevfikkoyun) - Block.cpp
 
-Jordan Edelman - Hazards.cpp
+Jordan Edelman (Joredelma) - Hazards.cpp
 
 # Sprint 3
 
