@@ -1,4 +1,4 @@
-# Program Organization
+## Program Organization
 
 # System Context Diagram
 ![System Context Diagram](https://user-images.githubusercontent.com/71106921/108025748-0c5ca180-6ff5-11eb-869c-7ea994bc655c.jpeg)
@@ -12,10 +12,18 @@ As our game runs using the Unreal Engine, most of the heavy lifting is done ther
 ![Component Diagram](https://user-images.githubusercontent.com/71106921/108025776-21d1cb80-6ff5-11eb-993f-6771bb6ccdce.jpeg)
 Our menu UI is the first thing any player will see, with this in mind we designed it to be easy to understand and familiar.
 
+## Code Design
 # Class Diagram
-![Class Diagram](https://user-images.githubusercontent.com/71106921/108025845-3ca44000-6ff5-11eb-9007-f1229ed91565.jpeg)
-The classes central to our games implementaion and their hierarchy are outlined here.<br />
-User story relations: PowerUp[4] - Bomb[2] - Player[1] - Hazard[5] - Block[3]
+![Class Diagram (1)](https://user-images.githubusercontent.com/71106921/108142344-96f3de00-7093-11eb-89f7-e2db09f8747c.jpeg)
+The user(s) will need to have access to the player's data such health, possibly lives, bomb availability, and the Power-ups that their character has collected. While this is stored in the player class, it must make calls to the Bomb and Power-up classes in order to calculate hits an effects. The same logic applies to the Hazard class when the player collides with an element designated a "Hazard". The block class is seperated as it does not have a direct affect on the player class, however, it block movement of the player and players MUST NOT be able to pass through them.
+Classes | User Story ID 
+--------|--------------
+PowerUp | 04, 
+Bomb | 07, 
+Player | 01,
+Hazard | 
+Block | 
+
 
 # Activity Diagram
 ![Activity Diagram](https://user-images.githubusercontent.com/71106921/108025801-2ac29d00-6ff5-11eb-864d-8ed044fbba00.jpeg)
@@ -24,9 +32,7 @@ User story relations: PowerUp[4] - Bomb[2] - Player[1] - Hazard[5] - Block[3]
 # Sequence Diagram
 ![Sequence Diagram-page-001](https://user-images.githubusercontent.com/71106921/108026279-0a471280-6ff6-11eb-81d7-85ad1b605b7d.jpg)
 
-# ER Diagram
-
-# URL Mock-Up and Diagram
+# User Interface Design
 ![KingOfBombsUIStart](https://user-images.githubusercontent.com/71106921/108016462-91898b80-6fe0-11eb-98a6-389839f739b3.png)
 This Depicts the UI for the beginning of the game as of now. It gives the player straightforward options for now to initiate play, manipulate the game settings, close the application, and to find information on the game.
 
@@ -44,30 +50,6 @@ This is the first-person view all players will see while on the map. The gray ob
 
 ![UI diagram](https://user-images.githubusercontent.com/71106921/108139771-c8b67600-708e-11eb-8c16-bb7f0bd70f31.jpeg)
 This is a compresive diagram of how the UI will interact and reach one another.
-
-
-# Code Design
-Classes:
-
-Bomb.cpp
-  The abstract class for the bomb.
-Player.cpp
-  Class for the player.
-Ghost.cpp
-  Class for the dead player.
-PlayerController.cpp
-  Controller responsible for spawning player and ghost.
- KingOfBombsCharacter.cpp
-  abstract class for player movement and camera.
-Hazard.cpp
-  The abstract class for any map hazards.
-PowerUp.cpp
-  The abstract class for powerups.
-Block.cpp
-  The abstract class for the blocks the map will be made out of.
-
-# Data Design
-
 
 # Business Rules
 
