@@ -42,6 +42,9 @@ This is the UI vefore starting the game. Although not depicted yet, its consider
 ![InGameView](https://user-images.githubusercontent.com/71106921/108016477-9d754d80-6fe0-11eb-9387-b51e4690b086.png)
 This is the first-person view all players will see while on the map. The gray object on the left and right will be the blocks players can destroy. The players cannot break the "wall" blocks to exit the map. The view will also be similar to for "Ghost" players as well.
 
+![UI diagram](https://user-images.githubusercontent.com/71106921/108139771-c8b67600-708e-11eb-8c16-bb7f0bd70f31.jpeg)
+This is a compresive diagram of how the UI will interact and reach one another.
+
 
 # Code Design
 Classes:
