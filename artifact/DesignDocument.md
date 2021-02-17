@@ -6,38 +6,38 @@ Since our goal is to support 2-4 players in the game while on one screen, there 
 
 Context | User Story ID 
 --------|--------------
-King of Bombs User | 001 - 013
-King of Bomb.exe | 001, 006, 010, 002, 11
-King of Bombs System | 001 - 013
-Unreal Engine | 01, 03, 04, 013
+King of Bombs User | 01 - 14
+King of Bomb.exe | 1, 6, 10, 2, 11
+King of Bombs System | 1 - 14
+Unreal Engine | 1, 3, 4, 13
 
 ## Container Diagram
 ![Container Diagram](https://user-images.githubusercontent.com/71106921/108025767-1aaabd80-6ff5-11eb-9e6b-5195bc6315cd.jpeg)
 With a more in-depth look into the King of Bombs system, the user accesses the King of Bombs system through the King of Bomb.exe and starts with the Main Menu Application where the intial user inputs are collected and pushed into the Game Data Application. Now, this section is primarliy in charge of changing settings and stats to meet the user demand/input. It is also considered the process where assest and libaries are imported from Unreal Engine to run the game. This is then reflected in the game Application which is essentially the outputting of the game to the screen with the maps, player models, and associated elements.
 
 Container | User Story ID 
---------|--------------
-King Of Bombs User | 01 - 13, 
-King Of Bomb.exe | 01, 06, 10, 02, 11
-Game Application | 01, 02 , 09 , 
+----------|--------------
+King Of Bombs User | 1 - 13
+King Of Bomb.exe | 1, 2, 6 , 10 , 11
+Game Application | 1, 2 , 9 , 12
 Main Menu Application |10 , 11 , 13 
-Game Data Application | 08, 09
-Unreal Engine | 01, 03, 04, 13
+Game Data Application | 8, 9
+Unreal Engine | 1, 3 , 4 , 13
 
 ## Component Diagram
 ![Component Diagram](https://user-images.githubusercontent.com/71106921/108025776-21d1cb80-6ff5-11eb-993f-6771bb6ccdce.jpeg)
 Our menu UI is the first thing any player will see, with this in mind we designed it to be easy to understand and navigate. This diagram illustrates the different components each button of the inital UI will call and interface with in order to help the user navigate from and to the game.
 
 Component | User Story ID 
---------|--------------
+----------|--------------
 Main Menu Application | 10 , 11 , 13  
-Setting Compoment |12 , , 
-Tutorial Compoment |06 , 10
-Play Component |08 ,09 , , 
-Quit Component | , 
-Main Game Component | , 
-Unreal Engine | 01, 03, 04, 013 
-Screen Application | , 
+Setting Compoment | 8 , 9 , 11 , 12 , 13
+Tutorial Compoment | 6 , 10
+Play Component | 1-13
+Quit Component | 14 
+Main Game Component | 2, 3 , 4 , 5 , 7 , 8 
+Unreal Engine | 1, 3, 4, 13 
+Screen Application | 1,9 
 
 # Code Design
 
@@ -47,11 +47,11 @@ The user(s) will need to have access to the player's data such health, possibly 
 
 Classes | User Story ID 
 --------|--------------
-PowerUp | 004, 007
-Bomb | 007, 005, 002
-Player | 001, 009, 008, 002
-Hazard | 003, 005
-Block | 003, 005
+PowerUp | 4, 7
+Bomb | 7, 5, 2
+Player | 1, 9, 8, 2
+Hazard | 3, 5
+Block | 3, 5
 
 
 ## Activity Diagram
@@ -60,17 +60,24 @@ Block | 003, 005
 The basic paths the user can take through our system, several loops stemming from the menu UI include: the tutorial, game settings, and the game itself.
 
 Activity  | User Story ID 
---------|--------------
-Menu Select | , 
-Tutorial | , , 
-Start Game | , , , 
-Chance Settings | , 
-Leadership Board | , 
-Play Again | , 
+----------|--------------
+Menu Select | 11, 13
+Tutorial |6, 10
+Start Game | 6 
+Chance Settings | 8 , 11 , 13
+Leadership Board | 9 
+Play Again | 7 
 
 ## Sequence Diagram
 ![Sequence Diagram-page-001](https://user-images.githubusercontent.com/71106921/108026279-0a471280-6ff6-11eb-81d7-85ad1b605b7d.jpg)
 This is an extremely simplified representation of how a user can quickly access the game with one or more users. This is following the assumption that a user does not use acess tutorial and uses base settings.
+
+Activity  | User Story ID 
+----------|--------------
+Launch Game | 11 , 13 
+Press Play |6, 10
+Join Game | 6
+Play GAme | 1-13
 
 # User Interface Design
 ![KingOfBombsUIStart](https://user-images.githubusercontent.com/71106921/108016462-91898b80-6fe0-11eb-98a6-389839f739b3.png)
@@ -93,11 +100,11 @@ This is a compresive diagram of how the UI will interact and reach one another.
 
 Classes | User Story ID 
 --------|--------------
-PowerUp | 004, 007
-Bomb | 007, 005, 002
-Player | 001, 009, 008, 002
-Hazard | 003, 005
-Block | 003, 005
+PowerUp | 4, 7
+Bomb | 7, 5, 2
+Player | 1, 9, 8, 2
+Hazard | 3, 5
+Block | 3, 5
 
 # Business Rules
 
