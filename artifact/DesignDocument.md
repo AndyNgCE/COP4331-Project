@@ -15,9 +15,29 @@ Unreal Engine | 01, 03, 04, 013
 ![Container Diagram](https://user-images.githubusercontent.com/71106921/108025767-1aaabd80-6ff5-11eb-9e6b-5195bc6315cd.jpeg)
 As our game runs using the Unreal Engine, most of the heavy lifting is done there. The loop our applications will run in is descibed here as well.
 
+Container | User Story ID 
+--------|--------------
+King Of Bombs User | 001 - 013, 
+King Of Bomb.exe | 001, 006, 010, 002, 11
+Game Application | , , , 
+Main Menu Application | , 
+Game Data Application | , 
+Unreal Engine | 01, 03, 04, 013
+
 ## Component Diagram
 ![Component Diagram](https://user-images.githubusercontent.com/71106921/108025776-21d1cb80-6ff5-11eb-993f-6771bb6ccdce.jpeg)
 Our menu UI is the first thing any player will see, with this in mind we designed it to be easy to understand and familiar.
+
+Component | User Story ID 
+--------|--------------
+Main Menu Application | , 
+Setting Compoment | , , 
+Tutorial Compoment | , 
+Play Component | , , , 
+Quit Component | , 
+Main Game Component | , 
+Unreal Engine | , 
+Screen Application | , 
 
 # Code Design
 
@@ -37,6 +57,15 @@ Block | 003, 005
 ## Activity Diagram
 ![Activity Diagram](https://user-images.githubusercontent.com/71106921/108025801-2ac29d00-6ff5-11eb-864d-8ed044fbba00.jpeg)
 <br />The basic paths the user can take through our system, several loops stemming from the menu UI include: the tutorial, game settings, and the game itself.
+
+Activity  | User Story ID 
+--------|--------------
+Menu Select | 004, 007
+Tutorial | 007, 005, 002
+Start Game | 001, 009, 008, 002
+Chance Settings | 003, 005
+Leadership Board | 003, 005
+Play Again | 003, 005
 
 ## Sequence Diagram
 ![Sequence Diagram-page-001](https://user-images.githubusercontent.com/71106921/108026279-0a471280-6ff6-11eb-81d7-85ad1b605b7d.jpg)
