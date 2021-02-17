@@ -17,12 +17,12 @@ With a more in-depth look into the King of Bombs system, the user accesses the K
 
 Container | User Story ID 
 --------|--------------
-King Of Bombs User | 001 - 013, 
-King Of Bomb.exe | 001, 006, 010, 002, 11
-Game Application | , , , 
-Main Menu Application | , 
-Game Data Application | , 
-Unreal Engine | 01, 03, 04, 013
+King Of Bombs User | 01 - 13, 
+King Of Bomb.exe | 01, 06, 10, 02, 11
+Game Application | 01, 02 , 09 , 
+Main Menu Application |10 , 11 , 13 
+Game Data Application | 08, 09
+Unreal Engine | 01, 03, 04, 13
 
 ## Component Diagram
 ![Component Diagram](https://user-images.githubusercontent.com/71106921/108025776-21d1cb80-6ff5-11eb-993f-6771bb6ccdce.jpeg)
@@ -30,13 +30,13 @@ Our menu UI is the first thing any player will see, with this in mind we designe
 
 Component | User Story ID 
 --------|--------------
-Main Menu Application | , 
-Setting Compoment | , , 
-Tutorial Compoment | , 
-Play Component | , , , 
+Main Menu Application | 10 , 11 , 13  
+Setting Compoment |12 , , 
+Tutorial Compoment |06 , 10
+Play Component |08 ,09 , , 
 Quit Component | , 
 Main Game Component | , 
-Unreal Engine | , 
+Unreal Engine | 01, 03, 04, 013 
 Screen Application | , 
 
 # Code Design
@@ -61,12 +61,12 @@ The basic paths the user can take through our system, several loops stemming fro
 
 Activity  | User Story ID 
 --------|--------------
-Menu Select | 004, 007
-Tutorial | 007, 005, 002
-Start Game | 001, 009, 008, 002
-Chance Settings | 003, 005
-Leadership Board | 003, 005
-Play Again | 003, 005
+Menu Select | , 
+Tutorial | , , 
+Start Game | , , , 
+Chance Settings | , 
+Leadership Board | , 
+Play Again | , 
 
 ## Sequence Diagram
 ![Sequence Diagram-page-001](https://user-images.githubusercontent.com/71106921/108026279-0a471280-6ff6-11eb-81d7-85ad1b605b7d.jpg)
