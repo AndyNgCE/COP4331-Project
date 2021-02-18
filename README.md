@@ -57,19 +57,38 @@ Jordan Edelman (Joredelma) - Downloaded Unreal Engine 4,Epic Game Launcher and V
 [Demonstration](https://www.youtube.com/watch?v=WkznemdsAzA)
 
 # Task Allocation
-Zach (ZachKuj) - Ghost.cpp; Character.cpp
+Zach (ZachKuj) - Ghost.cpp; Character.cpp, Create Design Document
 
-Andy Nguyen (AndyNgCE) - Power-up.cpp
+Andy Nguyen (AndyNgCE) - Power-up.cpp, Create Design Document
 
-Gabriel Barcenas (Gbarc1002) - Bomb.cpp
+Gabriel Barcenas (Gbarc1002) - Bomb.cpp, Create Design Document
 
-Tevfik Koyun (tevfikkoyun) - Block.cpp
+Tevfik Koyun (tevfikkoyun) - Block.cpp, Create Design Document
 
-Jordan Edelman (Joredelma) - Hazards.cpp
+Jordan Edelman (Joredelma) - Hazards.cpp, Create Design Document
 
 # Sprint 3
+[Product Backlog](https://trello.com/b/QNCct5eq/king-of-bombs) \
+[Sprint Backlog](https://trello.com/b/QNCct5eq/king-of-bombs) \
+[Requirements](https://trello.com/b/QNCct5eq/king-of-bombs) \
+[Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026) \
+[Velocity Chart](https://docs.google.com/spreadsheets/d/1KRNAfiRvPILEtd5-9JKQYyp52EXsUcwrr4NSR5S0dHY/edit?usp=sharing)\
+[Design Document](https://github.com/AndyNgCE/COP4331-Project/blob/main/artifact/DesignDocument.md)\
+[Demonstration](https://www.youtube.com/watch?v=WkznemdsAzA) \
+[Source Code]()\
+[Tests]()\
+[Demostration]()\
 
 # Task Allocation
+Zach (ZachKuj) - Ghost.cpp, Fixing Design Document and Trello, Source Code generation
+
+Andy Nguyen (AndyNgCE) - Power-up.cpp, Fixing Design Document and Trello, Source Code generation, Video Editing and posting, Fixing Velocity and Burndown charts
+
+Gabriel Barcenas (Gbarc1002) - Bomb.cpp, Fixing Design Document and Trello, Source Code generation
+
+Tevfik Koyun (tevfikkoyun) - Block.cpp, Fixing Design Document and Trello, Source Code generation
+
+Jordan Edelman (Joredelma) - Hazards.cpp, Fixing Design Document and Trello, Source Code generation
 
 # Sprint 4
 
