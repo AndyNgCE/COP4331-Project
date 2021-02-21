@@ -20,7 +20,7 @@ No | Steps to Reproduce | Expected Behavior
 7 | Hold shift and press right on keyboard | Moves right(camera locked) until reaching collision range of bomb
 8 | Player reaches bomb after moving backwards | Player movement stops
 
-## Character Movement Interaction (Blocks)- Manual Test - make block.cpp
+## Character Movement Interaction (Blocks)- Manual Test
 No | Steps to Reproduce | Expected Behavior
 --|--------------|-------------------------
 1 | Press up key on keyboard | Move forward until reaching collision range of block
@@ -32,3 +32,16 @@ No | Steps to Reproduce | Expected Behavior
 7 | Hold shift and press right on keyboard | Moves right(camera locked) until reaching collision range of block
 8 | Player reaches block after moving backwards | Player movement stops
 9 | Move Player in direction of block | Player will stop before passing through any blocktype
+
+## Character Movement Interaction (Power-Up)- Manual Test
+No | Steps to Reproduce | Expected Behavior
+--|--------------|-------------------------
+1 | Press up key on keyboard | Move forward until reaching collision range of Power-Up(s).
+2 | Player reaches  Power-Up(s) after moving forward | Player movement continues and Power-Up(s) de-spawn.
+3 | Press back key on keyboard | Move backwards until reaching collision range of  Power-Up(s).
+4 | Player reaches  Power-Up(s) after moving backwards | Player movement continues and Power-Up(s) despawn.
+5 | Hold shift + press left on keyboard | Moves left (camera locked) until reaching collision range of Power-Up(s).
+6 | Player reaches block after moving backwards | Player movement continues and Power-Up(s) despawn.
+7 | Hold shift and press right on keyboard | Moves right(camera locked) until reaching collision range of Power-Up(s).
+8 | Player reaches  Power-Up(s) after moving backwards | Player movement continues and Power-Up(s) despawn.
+9 | Move Player in any direction of Power-Up(s)| Player will continue moving and Power-Up(s) will ALWAYS despawn.
