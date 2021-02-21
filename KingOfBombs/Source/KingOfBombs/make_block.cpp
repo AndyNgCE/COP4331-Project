@@ -2,7 +2,7 @@
 
 
 #include "Make_Block.h"
-#include <Runtime/Engine/Private/Components/BoxComponent.cpp>
+#include "Components/BoxComponent.h"
 
 // Sets default values
 AMake_Block::AMake_Block()
@@ -26,7 +26,8 @@ void AMake_Block::Tick(float DeltaTime)
 
 }
 
-	void AMake_Block::DestoryComponent(block){
+void AMake_Block::DestoryComponent()
+{
 
-	}
+}
 

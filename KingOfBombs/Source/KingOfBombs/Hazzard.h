@@ -7,7 +7,7 @@
 #include "Hazzard.generated.h"
 
 UCLASS()
-class CLASSTEST_API AHazzard : public AActor
+class KINGOFBOMBS_API AHazzard : public AActor
 {
 	GENERATED_BODY()
 	
@@ -24,7 +24,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere)
-		UStaticMeshComponent* mesh;
+		class UStaticMeshComponent* mesh;
 
 	UPROPERTY(EditAnywhere)
 		class UBoxComponent* CollisionMesh = nullptr;

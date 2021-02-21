@@ -4,18 +4,18 @@
 #include "Bomb.h"
 
 // Sets default values for this component's properties
-UBomb::UBomb()
+ABomb::ABomb()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
-	PrimaryComponentTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = true;
 	
 	// ...
 }
 
 
 // Called when the game starts
-void UBomb::BeginPlay()
+void ABomb::BeginPlay()
 {
 	Super::BeginPlay();
 
@@ -25,14 +25,9 @@ void UBomb::BeginPlay()
 
 
 // Called every frame
-void UBomb::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void ABomb::Tick(float DeltaTime)
 {
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+	Super::Tick(DeltaTime);
 
 	// ...
-}
-
-void UBomb::BombSpawn(int size, int damage, string type) {
-
-	
 }

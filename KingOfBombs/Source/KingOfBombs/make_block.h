@@ -23,9 +23,9 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UBoxComponent* CollisionMesh = nullptr;
+	class UBoxComponent* CollisionMesh = nullptr;
 
 	UFUNCTION()
-	void DestoryComponent(block);
+	void DestoryComponent();
 		
 };

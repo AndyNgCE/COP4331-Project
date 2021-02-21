@@ -81,6 +81,8 @@ void AKingOfBombsCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 void AKingOfBombsCharacter::SpawnBomb()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Spawning Bomb"));
+	FVector Location = this->GetActorLocation() + this->GetActorForwardVector() * 200;
+	ABomb* Bomb = GetWorld()->SpawnActor<ABomb>(CharacterBomb.Get(),Location,this->GetActorRotation());
 }
 
 

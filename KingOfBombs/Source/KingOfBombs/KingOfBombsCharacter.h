@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Bomb.h"
 #include "KingOfBombsCharacter.generated.h"
 
 UCLASS(config=Game)
@@ -78,6 +79,10 @@ public:
 	int MovementSpeed = 300;
 
 	void SpawnBomb();
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<ABomb> CharacterBomb;
+
 
 	//void ComsumePowerUp(TSubClassOf<APowerUp> PowerUpClass);
 };

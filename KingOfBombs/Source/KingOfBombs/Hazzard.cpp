@@ -2,7 +2,7 @@
 
 
 #include "Hazzard.h"
-
+#include "Components/StaticMeshComponent.h"
 
 // Sets default values
 AHazzard::AHazzard()
@@ -29,7 +29,10 @@ void AHazzard::Tick(float DeltaTime)
 
 }
 
-void AHazzard::AffectPlayer(class AActor* OtherActor) {}
+void AHazzard::AffectPlayer(class AActor* OtherActor)
+{
+
+}
 
 void AHazzard::OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {

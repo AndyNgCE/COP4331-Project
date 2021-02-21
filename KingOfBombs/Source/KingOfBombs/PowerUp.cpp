@@ -2,8 +2,7 @@
 
 
 #include "PowerUp.h"
-#include "..\Public\PowerUp.h"
-#include "Component/BoxComponent.h"
+#include "Components/BoxComponent.h"
 #include "Engine/Engine.h"
 
 // Sets default values
@@ -18,10 +17,10 @@ APowerUp::APowerUp()
 	Collisionbox = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent"));
 	Collisionbox->SetBoxExtent(FVector(32.f, 32.f, 32.f));
 	Collisionbox->SetCollisionProfileName("Trigger");
-	RootComponent = CollisionBox;
+	//RootComponent = CollisionBox;
 
-	CollisionBox->OnComponentBeginOverlap.AddDynamic(this, &APowerUp::OnOverlapBegin);
-	CollisionBox->OnComponentEndOverlap.AddDynamic(this, &APowerUp::OnOverlapEnd);
+	//Collisionbox->OnComponentBeginOverlap.AddDynamic(this, &APowerUp::OnOverlapBegin);
+	//Collisionbox->OnComponentEndOverlap.AddDynamic(this, &APowerUp::OnOverlapEnd);
 }
 
 // Called when the game starts or when spawned
