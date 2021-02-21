@@ -1,5 +1,6 @@
 
 No | Steps to Reproduce | Expected Behavior
+--|--------------|-------------------------
 1 | Press up key | Move forward
 2 | Press left key | Turn left
 3 | Press right key | Turn right
