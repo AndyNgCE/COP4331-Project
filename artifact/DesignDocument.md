@@ -42,7 +42,8 @@ Screen Application | 1, 9
 # Code Design
 
 ## Class Diagram
-![Class Diagram (1)](https://user-images.githubusercontent.com/71106921/108143609-14b8e900-7096-11eb-931c-dbbe02d15bfe.jpeg)
+![Class Diagram (2)](https://user-images.githubusercontent.com/71106921/108638345-d425ea80-745c-11eb-9bd6-dd3497d93078.jpeg)
+)
 The user(s) will need to have access to the player's data such health, possibly lives, bomb availability, and the Power-ups that their character has collected. While this is stored in the player class, it must make calls to the Bomb and Power-up classes in order to calculate hits an effects. The same logic applies to the Hazard class when the player collides with an element designated a "Hazard". The block class is seperated as it does not have a direct affect on the player class, however, it block movement of the player and players MUST NOT be able to pass through them.
 
 Classes | User Story ID 
@@ -129,9 +130,6 @@ The game will not be sharing data with other software or hardware.
 
 # Internationalization/Localization
 There is no plans for localization beyond English.
-
-# Input/Output
-The current projected I/O scheme for the game's achitecture follows a look-ahead scheme and detects them at the file level.
 
 # Error Processing
 Our error handling will be detective and passive. An single error message will be displayed giving any information relating to the error. The game system will then free all data structures relating to the game settings, current leaderboard, and player stats. Unreal Engine may have some exeption-proccessing of its own that we will let run, we will still include ours.
