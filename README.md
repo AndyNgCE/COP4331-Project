@@ -68,9 +68,9 @@ Jordan Edelman (Joredelma) - Hazards.cpp, Create Design Document
 [Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)\
 [Velocity Chart](https://docs.google.com/spreadsheets/d/1KRNAfiRvPILEtd5-9JKQYyp52EXsUcwrr4NSR5S0dHY/edit?usp=sharing)\
 [System Architecture](https://github.com/AndyNgCE/COP4331-Project/blob/main/artifact/DesignDocument.md)\
-[Source Code]()\
-[Tests]()\
-[Demonstration](https://www.youtube.com/watch?v=WkznemdsAzA)
+[Source Code](https://github.com/AndyNgCE/COP4331-Project/tree/main/Source)\
+[Tests](https://github.com/AndyNgCE/COP4331-Project/blob/main/Tests.md)\
+[Demonstration](https://www.youtube.com/watch?v=qt8CLX0K1xQ)
 
 # Task Allocation
 Zach (ZachKuj) - Ghost.cpp, Fixing Design Document and Trello, Source Code generation
