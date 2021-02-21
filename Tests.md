@@ -1,4 +1,4 @@
-## Character movement manual test - character.cpp
+## Character Movement Manual Test - character.cpp
 No | Steps to Reproduce | Expected Behavior
 --|--------------|-------------------------
 1 | Press up key on keyboard | Move forward
