@@ -28,7 +28,7 @@ public:
 		UStaticMeshComponent* PowerMesh;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
-		class UBoxComponent* Collisionbox;
+		class USphereComponent* Collisionbox;
 
 	UFUNCTION()
 		void OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);

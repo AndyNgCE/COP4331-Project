@@ -2,7 +2,7 @@
 
 
 #include "PowerUp.h"
-#include "Components/BoxComponent.h"
+#include "Components/SphereComponent.h"
 #include "Engine/Engine.h"
 
 // Sets default values
@@ -13,8 +13,8 @@ APowerUp::APowerUp()
 
 	PowerMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMesh"));
 
-	// Collision 
-	Collisionbox = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComponent"));
+	// Collision box set-up in shape of a sphere
+	Collisionbox = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
 	Collisionbox->SetBoxExtent(FVector(32.f, 32.f, 32.f));
 	Collisionbox->SetCollisionProfileName("Trigger");
 	//RootComponent = CollisionBox;
