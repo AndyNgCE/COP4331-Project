@@ -14,7 +14,9 @@ APowerUp::APowerUp()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	//Radius = 55.0f;
+	Pitch = 0.f;
+	Yaw = -8.f;
+	Roll = 0.f;
 
 	// Collision box set-up in shape of a sphere
 	Collisionbox = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
@@ -40,9 +42,16 @@ void APowerUp::BeginPlay()
 void APowerUp::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	// Displays the debug hitbox of the power-up
 	DrawDebugSphere(GetWorld(), GetActorLocation(), Radius, 20, FColor::Red, false, -1, 0, 1);
+
+	// Sets the rotation of Power-Up
+	FQuat QuatRotation = FQuat(FRotator(Pitch, Yaw, Roll));
+	AddActorLocalRotation(QuatRotation, false, 0, ETeleportType::None);
 }
 
+// Remove the Power-Up instance when in contact with player actor
 void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	//OtherActor->IsA();
@@ -53,6 +62,7 @@ void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Other
 	}
 }
 
+// Use to print generic power up message - override to print specialized messages
 void APowerUp::OnPick()
 {
 	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Blue, FString(TEXT("Power Aquired")));

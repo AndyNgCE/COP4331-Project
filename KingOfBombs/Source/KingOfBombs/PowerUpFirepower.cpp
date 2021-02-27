@@ -5,7 +5,7 @@
 
 APowerUpFirepower::APowerUpFirepower()
 {
-	
+	Duration = 10;
 }
 
 void APowerUpFirepower::OnPick()

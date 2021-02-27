@@ -5,7 +5,7 @@
 
 APowerUpBombUp::APowerUpBombUp()
 {
-
+	Duration = -1;
 }
 
 void APowerUpBombUp::OnPick()

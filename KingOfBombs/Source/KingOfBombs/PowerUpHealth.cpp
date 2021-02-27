@@ -5,7 +5,7 @@
 
 APowerUpHealth::APowerUpHealth()
 {
-
+	Duration = -1;
 }
 
 void APowerUpHealth::OnPick()
