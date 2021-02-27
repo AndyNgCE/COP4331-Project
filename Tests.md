@@ -45,3 +45,15 @@ No | Steps to Reproduce | Expected Behavior
 7 | Hold shift and press right on keyboard | Moves right(camera locked) until reaching collision range of Power-Up(s).
 8 | Player reaches  Power-Up(s) after moving backwards | Player movement continues and Power-Up(s) despawn.
 9 | Move Player in any direction of Power-Up(s)| Player will continue moving and Power-Up(s) will ALWAYS despawn.
+
+## Power-Up Pickup(Movement) - Manual Test
+No | Steps to Reproduce | Expected Behavior
+--|--------------|-------------------------
+1 | Press forward or "W" on keyboard to walk forward | Power-Up despawns and affilated effect applies.
+2 | Press down or "S" on keyboard to walk backwards | Power-Up despawns and affilated effect applies.
+3 | Press right or "D" on keyboard to move right | Power-Up despawns and affilated effect applies.
+4 | Press left or "A" on keyboard to move left | Power-Up despawns and affilated effect applies.
+
+## Power-Up Pickup(Movement) - Automated Test
+Expectant behavior:
+On power spawn and subsquent grab a line should be printed the screen automatically indicating both actions.

@@ -4,6 +4,7 @@
 #include "PowerUp.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
 #include "DrawDebugHelpers.h"
 #include "Engine/Engine.h"
 
@@ -13,7 +14,7 @@ APowerUp::APowerUp()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	Radius = 55.0f;
+	//Radius = 55.0f;
 
 	// Collision box set-up in shape of a sphere
 	Collisionbox = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
@@ -47,8 +48,14 @@ void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Other
 	//OtherActor->IsA();
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr))
 	{
+		OnPick();
 		Destroy();
 	}
+}
+
+void APowerUp::OnPick()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Blue, FString(TEXT("Power Aquired")));
 }
 
 
