@@ -3,6 +3,7 @@
 #pragma once
 #include "Components/BoxComponent.h"
 #include "CoreMinimal.h"
+#include "KBPlayer.h"
 #include "GameFramework/Actor.h"
 #include "Hazzard.generated.h"
 
@@ -30,7 +31,7 @@ public:
 		class UBoxComponent* CollisionMesh = nullptr;
 
 	UFUNCTION()
-		virtual void AffectPlayer(class AKBPlayer* OtherActor);
+		virtual void AffectPlayer(AKBPlayer* OtherActor);
 
 	UFUNCTION()
 		void OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);

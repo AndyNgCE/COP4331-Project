@@ -13,6 +13,7 @@ void APowerUpMovement::OnPick(AKBPlayer* target)
 {
 	if (target != nullptr)
 	{
+		// Increase speed
 		target->MovementSpeed = 800;
 		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("Movement Speed Up")));
 	}

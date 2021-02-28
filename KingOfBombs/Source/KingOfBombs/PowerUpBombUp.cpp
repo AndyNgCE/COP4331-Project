@@ -12,6 +12,7 @@ void APowerUpBombUp::OnPick(AKBPlayer* target)
 {
 	if (target != nullptr)
 	{
+		// Increase inventory
 		target->NumBombs++;
 		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Purple, FString(TEXT("More Explosions!")));
 	}
