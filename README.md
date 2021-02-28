@@ -68,7 +68,7 @@ Jordan Edelman (Joredelma) - Hazards.cpp, Create Design Document
 [Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)\
 [Velocity Chart](https://docs.google.com/spreadsheets/d/1KRNAfiRvPILEtd5-9JKQYyp52EXsUcwrr4NSR5S0dHY/edit?usp=sharing)\
 [System Architecture](https://github.com/AndyNgCE/COP4331-Project/blob/main/artifact/DesignDocument.md)\
-[Source Code](https://github.com/AndyNgCE/COP4331-Project/tree/main/Source)\
+[Source Code](https://github.com/AndyNgCE/COP4331-Project/tree/main/KingOfBombs/Source/KingOfBombs)\
 [Tests](https://github.com/AndyNgCE/COP4331-Project/blob/main/Tests.md)\
 [Demonstration](https://www.youtube.com/watch?v=qt8CLX0K1xQ)
 
@@ -84,8 +84,23 @@ Tevfik Koyun (tevfikkoyun) - Block.cpp, Fixing Design Document and Trello, Sourc
 Jordan Edelman (Joredelma) - Hazards.cpp, Fixing Design Document and Trello, Source Code generation
 
 # Sprint 4
-
+[Trello Board](https://trello.com/b/QNCct5eq/king-of-bombs)\
+[Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)\
+[Velocity Chart](https://docs.google.com/spreadsheets/d/1KRNAfiRvPILEtd5-9JKQYyp52EXsUcwrr4NSR5S0dHY/edit?usp=sharing)\
+[System Architecture](https://github.com/AndyNgCE/COP4331-Project/blob/main/artifact/DesignDocument.md)\
+[Source Code](https://github.com/AndyNgCE/COP4331-Project/tree/main/KingOfBombs/Source/KingOfBombs)\
+[Tests](https://github.com/AndyNgCE/COP4331-Project/blob/main/Tests.md)\
+[Demonstration]()
 # Task Allocation
+Zach (ZachKuj) - Child for KGPlayer.cpp; (Ghost)
+
+Andy Nguyen (AndyNgCE) - Children class for Power.cpp; (Movement, Healing, Bomb inc., and FirePower)
+
+Gabriel Barcenas (Gbarc1002) - Child class for bomb.cpp; (Ghost Bomb)
+
+Tevfik Koyun (tevfikkoyun) - Child class for block.cpp; (Destroyable Block)
+
+Jordan Edelman (Joredelma) - Children class for Hazard.cpp; (Teleport, Damage, Ice, Slow)
 
 # Sprint 5
 
