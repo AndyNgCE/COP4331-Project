@@ -30,6 +30,7 @@ public:
 	UPROPERTY(VisibleAnywhere)
 		class USphereComponent* Collisionbox;
 
+	// Set of variables used in the rotation of the Power-Ups
 	UPROPERTY(EditAnywhere, Category = "Movement")
 		float Pitch;
 

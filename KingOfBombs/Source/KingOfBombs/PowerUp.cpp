@@ -2,6 +2,8 @@
 
 
 #include "PowerUp.h"
+#include "KBPlayer.h"
+#include "KingOfBombsCharacter.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
@@ -54,11 +56,17 @@ void APowerUp::Tick(float DeltaTime)
 // Remove the Power-Up instance when in contact with player actor
 void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	//OtherActor->IsA(AKingOfBombsCharacter::AKingOfBombsCharacter());
-	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr))
+	// Specifying which actor in the scene can trigger the destroy functions
+	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
+	AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
+	if (impact != nullptr) //&& (OtherActor != this) && (OtherComp != nullptr))
 	{
 		OnPick();
 		Destroy();
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Blue, FString(TEXT("Power contact")));
 	}
 }
 
