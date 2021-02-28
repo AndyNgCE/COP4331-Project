@@ -17,7 +17,11 @@ AMake_Block::AMake_Block()
 
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(RootComponent);
+
+	CollisionMesh->OnComponentBeginOverlap.AddDynamic(this, &AMake_Block::OnOverlapBegin);
+
 }
+
 
 // Called when the game starts or when spawned
 void AMake_Block::BeginPlay()
