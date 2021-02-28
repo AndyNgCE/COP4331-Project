@@ -57,8 +57,8 @@ void APowerUp::Tick(float DeltaTime)
 void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	// Specifying which actor in the scene can trigger the destroy functions
-	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
 	AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
+	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
 	if (impact != nullptr) //&& (OtherActor != this) && (OtherComp != nullptr))
 	{
 		OnPick(player);
