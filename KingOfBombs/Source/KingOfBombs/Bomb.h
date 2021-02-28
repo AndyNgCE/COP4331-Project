@@ -18,9 +18,8 @@ class KINGOFBOMBS_API ABomb : public AActor
 public:	
 	// Sets default values for this component's properties
 	ABomb();
-	
-	//Initial Bomb Stats
 	int bombSize = 1;
+	int bombDamage = 1;
 	FString bombType = "default";
 
 

@@ -25,18 +25,9 @@ void ABomb::BeginPlay()
 
 
 // Called every frame
-// 30 frames per second
 void ABomb::Tick(float DeltaTime)
 {
-	bool timer = false;
-	if (DeltaTime == 60) {
-		timer = true;
-	}
-
-	if (timer == true) {
-		Destroy();
-	}
 	Super::Tick(DeltaTime);
-	
-	
+
+	// ...
 }
