@@ -42,7 +42,7 @@ public:
 	virtual void OnPick();
 
 	// Set generic variable like hitbox size and inventory flags
-	float Radius = 55.0f;
+	float Radius = 53.0f;
 	bool Equipped = false;
 	// Duration of effect - debatable if effects should be permanant or not
 	int Duration;
