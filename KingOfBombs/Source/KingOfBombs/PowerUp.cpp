@@ -54,7 +54,7 @@ void APowerUp::Tick(float DeltaTime)
 // Remove the Power-Up instance when in contact with player actor
 void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	//OtherActor->IsA(KBPlayer);
+	//OtherActor->IsA(AKingOfBombsCharacter::AKingOfBombsCharacter());
 	if ((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr))
 	{
 		OnPick();
