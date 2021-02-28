@@ -56,4 +56,4 @@ No | Steps to Reproduce | Expected Behavior
 
 ## Power-Up Pickup - Automated Test
 Expectant behavior:
-On Power-Up grab a line should be printed the screen automatically indicating action.
+On Power-Up grab, a line should be printed on the screen automatically indicating action.
