@@ -9,12 +9,12 @@ AHazzard::AHazzard()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+
 	CollisionMesh = CreateDefaultSubobject<UBoxComponent>(FName("Collision Mesh"));
-
 	CollisionMesh->SetBoxExtent(FVector(32.0F, 32.0F, 32.0F));
-
 	SetRootComponent(CollisionMesh);
+
+	mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	mesh->SetupAttachment(RootComponent);
 	//set default size once we know size of blocks the level is made of
 }
