@@ -91,6 +91,7 @@ Jordan Edelman (Joredelma) - Hazards.cpp, Fixing Design Document and Trello, Sou
 [Source Code](https://github.com/AndyNgCE/COP4331-Project/tree/main/KingOfBombs/Source/KingOfBombs)\
 [Tests](https://github.com/AndyNgCE/COP4331-Project/blob/main/Tests.md)\
 [Demonstration]()
+
 # Task Allocation
 Zach (ZachKuj) - Child for KGPlayer.cpp; (Ghost)
 
