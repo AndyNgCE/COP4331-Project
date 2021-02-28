@@ -3,9 +3,8 @@
 
 #include "Hazzard.h"
 #include "Components/StaticMeshComponent.h"
-#include <KingOfBombs/KBPlayer.h>
+#include "KingOfBombsCharacter.h"
 #include "KBPlayer.h"
-
 // Sets default values
 AHazzard::AHazzard()
 {
@@ -18,7 +17,8 @@ AHazzard::AHazzard()
 
 	mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	mesh->SetupAttachment(RootComponent);
-	//set default size once we know size of blocks the level is made of
+	
+	CollisionMesh->OnComponentBeginOverlap.AddDynamic(this, &AHazzard::OnOverlapBegin);
 }
 
 // Called when the game starts or when spawned
@@ -40,10 +40,12 @@ void AHazzard::AffectPlayer(AKBPlayer* OtherActor)
 
 }
 
-void AHazzard::OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+void AHazzard::OnOverlapBegin(AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
 	AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
+	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, FString::FromInt(player->Health));
+
 	if (impact != nullptr)
 	{
 		AffectPlayer(player);

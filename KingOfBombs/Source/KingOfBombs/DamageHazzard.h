@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Hazzard.h"
+#include "KBPlayer.h"
 #include "DamageHazzard.generated.h"
 
 /**
@@ -14,6 +15,6 @@ class KINGOFBOMBS_API ADamageHazzard : public AHazzard
 {
 	GENERATED_BODY()
 
-	void AffectPlayer(class AKBPlayer* OtherActor) override;
+	void AffectPlayer(AKBPlayer* OtherActor) override;
 	
 };
