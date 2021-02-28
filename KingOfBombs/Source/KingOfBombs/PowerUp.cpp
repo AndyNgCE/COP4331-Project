@@ -57,21 +57,20 @@ void APowerUp::Tick(float DeltaTime)
 void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	// Specifying which actor in the scene can trigger the destroy functions
-	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
 	AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
+	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
 	if (impact != nullptr) //&& (OtherActor != this) && (OtherComp != nullptr))
 	{
-		OnPick();
-		Destroy();
-	}
-	else
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Blue, FString(TEXT("Power contact")));
+		if (player != nullptr)
+		{
+			OnPick(player);
+			Destroy();
+		}
 	}
 }
 
 // Use to print generic power up message - override to print specialized messages
-void APowerUp::OnPick()
+void APowerUp::OnPick(AKBPlayer* target)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Blue, FString(TEXT("Power Aquired")));
 }

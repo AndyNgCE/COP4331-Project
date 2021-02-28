@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "KBPlayer.h"
 #include "PowerUp.h"
 #include "PowerUpHealth.generated.h"
 
@@ -17,5 +18,5 @@ class KINGOFBOMBS_API APowerUpHealth : public APowerUp
 public:
 	APowerUpHealth();
 
-	void OnPick() override;
+	void OnPick(AKBPlayer* target) override;
 };

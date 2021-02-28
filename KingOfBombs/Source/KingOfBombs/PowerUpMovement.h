@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "KBPlayer.h"
 #include "PowerUp.h"
 #include "PowerUpMovement.generated.h"
 
@@ -17,5 +18,5 @@ class KINGOFBOMBS_API APowerUpMovement : public APowerUp
 public:
 	APowerUpMovement();
 	
-	void OnPick() override;
+	void OnPick(AKBPlayer* target) override;
 };

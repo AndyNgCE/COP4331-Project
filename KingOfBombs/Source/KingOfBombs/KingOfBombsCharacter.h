@@ -74,6 +74,7 @@ public:
 
 	int Lives = 3;
 	int Health = 100;
+	int NumBombs = 1;
 
 	//stats
 	int MovementSpeed = 300;

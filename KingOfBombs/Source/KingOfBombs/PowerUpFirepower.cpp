@@ -8,7 +8,10 @@ APowerUpFirepower::APowerUpFirepower()
 	Duration = 10;
 }
 
-void APowerUpFirepower::OnPick()
+void APowerUpFirepower::OnPick(AKBPlayer* target)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, FString(TEXT("Bigger Explosions!")));
+	if (target != nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, FString(TEXT("Bigger Explosions!")));
+	}
 }

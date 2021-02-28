@@ -30,7 +30,7 @@ public:
 		class UBoxComponent* CollisionMesh = nullptr;
 
 	UFUNCTION()
-		void AffectPlayer(class AActor* OtherActor);
+		virtual void AffectPlayer(class AKBPlayer* OtherActor);
 
 	UFUNCTION()
 		void OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
