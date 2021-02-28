@@ -61,7 +61,7 @@ void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Other
 	AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
 	if (impact != nullptr) //&& (OtherActor != this) && (OtherComp != nullptr))
 	{
-		OnPick();
+		OnPick(player);
 		Destroy();
 	}
 	else
@@ -71,7 +71,7 @@ void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Other
 }
 
 // Use to print generic power up message - override to print specialized messages
-void APowerUp::OnPick()
+void APowerUp::OnPick(AKBPlayer* target)
 {
 	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Blue, FString(TEXT("Power Aquired")));
 }

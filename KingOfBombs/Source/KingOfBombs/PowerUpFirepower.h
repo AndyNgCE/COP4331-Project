@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "PowerUp.h"
+#include "KBPlayer.h"
 #include "PowerUpFirepower.generated.h"
 
 /**
@@ -17,5 +18,5 @@ class KINGOFBOMBS_API APowerUpFirepower : public APowerUp
 public:
 	APowerUpFirepower();
 	
-	void OnPick() override;
+	void OnPick(AKBPlayer* target) override;
 };

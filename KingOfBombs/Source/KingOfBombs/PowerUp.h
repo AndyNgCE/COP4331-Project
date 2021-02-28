@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "KBPlayer.h"
 #include "GameFramework/Actor.h"
 #include "PowerUp.generated.h"
 
@@ -40,7 +41,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Movement")
 		float Roll;
 
-	virtual void OnPick();
+	virtual void OnPick(AKBPlayer* target);
 
 	// Set generic variable like hitbox size and inventory flags
 	float Radius = 53.0f;
