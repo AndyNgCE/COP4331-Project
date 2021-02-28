@@ -10,6 +10,9 @@ APowerUpHealth::APowerUpHealth()
 
 void APowerUpHealth::OnPick(AKBPlayer* target)
 {
-	target->Health++;
-	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, FString(TEXT("Healed One Point of Damage!")));
+	if (target != nullptr)
+	{
+		target->Health++;
+		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, FString(TEXT("Healed One Point of Damage!")));
+	}
 }

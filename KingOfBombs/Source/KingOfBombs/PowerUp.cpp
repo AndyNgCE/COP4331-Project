@@ -61,12 +61,11 @@ void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Other
 	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
 	if (impact != nullptr) //&& (OtherActor != this) && (OtherComp != nullptr))
 	{
-		OnPick(player);
-		Destroy();
-	}
-	else
-	{
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Blue, FString(TEXT("Power contact")));
+		if (player != nullptr)
+		{
+			OnPick(player);
+			Destroy();
+		}
 	}
 }
 

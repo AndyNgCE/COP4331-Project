@@ -10,6 +10,9 @@ APowerUpBombUp::APowerUpBombUp()
 
 void APowerUpBombUp::OnPick(AKBPlayer* target)
 {
-	target->NumBombs++;
-	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Purple, FString(TEXT("More Explosions!")));
+	if (target != nullptr)
+	{
+		target->NumBombs++;
+		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Purple, FString(TEXT("More Explosions!")));
+	}
 }
