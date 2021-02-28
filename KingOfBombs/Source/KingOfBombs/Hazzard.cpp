@@ -17,7 +17,7 @@ AHazzard::AHazzard()
 
 	mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	mesh->SetupAttachment(RootComponent);
-	//CollisionMesh->OnComponentBeginOverlap.AddDynamic(this, &AHazzard::OnOverlapBegin);
+	CollisionMesh->OnComponentBeginOverlap.AddDynamic(this, &AHazzard::OnOverlapBegin);
 }
 
 // Called when the game starts or when spawned
@@ -43,8 +43,7 @@ void AHazzard::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* 
 {
 	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
 	AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
-	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, FString::FromInt(player->Health));
-
+	//GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, FString::FromInt(player->Health));
 	if (impact != nullptr)
 	{
 		AffectPlayer(player);
