@@ -43,7 +43,7 @@ Screen Application | 1, 9
 
 ## Class Diagram
 ![Class Diagram (2)](https://user-images.githubusercontent.com/71106921/108638345-d425ea80-745c-11eb-9bd6-dd3497d93078.jpeg)
-)
+[Class Diagram Children.pdf](https://github.com/AndyNgCE/COP4331-Project/files/6058120/Class.Diagram.Children.pdf)
 The user(s) will need to have access to the player's data such health, possibly lives, bomb availability, and the Power-ups that their character has collected. While this is stored in the player class, it must make calls to the Bomb and Power-up classes in order to calculate hits an effects. The same logic applies to the Hazard class when the player collides with an element designated a "Hazard". The block class is seperated as it does not have a direct affect on the player class, however, it block movement of the player and players MUST NOT be able to pass through them.
 
 Classes | User Story ID 
