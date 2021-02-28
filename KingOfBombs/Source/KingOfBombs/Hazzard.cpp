@@ -11,7 +11,11 @@ AHazzard::AHazzard()
 	PrimaryActorTick.bCanEverTick = true;
 	mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	CollisionMesh = CreateDefaultSubobject<UBoxComponent>(FName("Collision Mesh"));
-	SetRootComponent(mesh);
+
+	CollisionMesh->SetBoxExtent(FVector(32.0F, 32.0F, 32.0F));
+
+	SetRootComponent(CollisionMesh);
+	mesh->SetupAttachment(RootComponent);
 	//set default size once we know size of blocks the level is made of
 }
 
@@ -36,6 +40,9 @@ void AHazzard::AffectPlayer(class AActor* OtherActor)
 
 void AHazzard::OnOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	AffectPlayer(OtherActor);
+	if (OtherActor && (OtherActor != this) && OtherComp)
+	{
+		AffectPlayer(OtherActor);
+	}
 }
 
