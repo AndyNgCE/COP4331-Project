@@ -9,12 +9,12 @@ ABreakableBlock::ABreakableBlock() {
 }
 
 
-void ABreakableBlock::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult){
-
-	if ((OtherActor != NULL) && (OtherActor != this) && (OtherComp != nullptr) 
+void ABreakableBlock::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, FString(TEXT("Box health is 1")));
+	if ((OtherActor != NULL) && (OtherActor != this) && (OtherComp != nullptr))
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, FString("Box health is 1"));
 	}
 
 }
