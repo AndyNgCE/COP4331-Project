@@ -40,7 +40,7 @@ void AHazzard::AffectPlayer(AKBPlayer* OtherActor)
 
 }
 
-void AHazzard::OnOverlapBegin(AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+void AHazzard::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
 	AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
