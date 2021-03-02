@@ -59,9 +59,9 @@ void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Other
 	// Specifying which actor in the scene can trigger the destroy functions
 	AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
 	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
-	if (impact != nullptr) //&& (OtherActor != this) && (OtherComp != nullptr))
+	if (impact) //&& (OtherActor != this) && (OtherComp != nullptr))
 	{
-		if (player != nullptr)
+		if (player)
 		{
 			OnPick(player);
 			Destroy();

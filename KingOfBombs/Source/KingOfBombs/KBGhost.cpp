@@ -6,6 +6,6 @@
 AKBGhost::AKBGhost()
 {
 	Lives = 1;
-	Health = 500;
+	CurrentHealth = 500;
 	MovementSpeed = 600;
 }

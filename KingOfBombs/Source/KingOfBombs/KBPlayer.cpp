@@ -6,7 +6,7 @@
 AKBPlayer::AKBPlayer()
 {
 	Lives = 3;
-	Health = 100;
+	CurrentHealth = 100;
 	MovementSpeed = 300;
 	NumBombs = 1;
 }

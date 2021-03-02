@@ -13,7 +13,7 @@ void APowerUpHealth::OnPick(AKBPlayer* target)
 	if (target != nullptr)
 	{
 		// Increase health
-		target->Health++;
+		target->CurrentHealth -= 25;
 		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, FString(TEXT("Healed One Point of Damage!")));
 	}
 }

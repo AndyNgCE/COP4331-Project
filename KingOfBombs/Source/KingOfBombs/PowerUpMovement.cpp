@@ -2,7 +2,8 @@
 
 
 #include "PowerUpMovement.h"
-
+#include "GameFramework/PawnMovementComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 APowerUpMovement::APowerUpMovement()
 {
 	Duration = 5;
@@ -14,7 +15,9 @@ void APowerUpMovement::OnPick(AKBPlayer* target)
 	if (target != nullptr)
 	{
 		// Increase speed
-		target->MovementSpeed = target->MovementSpeed + 200;
+		target->MovementSpeed = target->MovementSpeed + 2000;
+		target->GetCharacterMovement()->MaxWalkSpeed = target->MovementSpeed;
+		target->GetCharacterMovement()->JumpZVelocity= 2000;
 		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("Movement Speed Up")));
 	}
 }

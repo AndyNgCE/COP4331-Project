@@ -71,10 +71,14 @@ public:
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
 
 
-
+	UPROPERTY(BlueprintReadOnly)
 	int Lives = 3;
-	int Health = 100;
-	int NumBombs = 1;
+	UPROPERTY(BlueprintReadOnly)
+		int CurrentHealth = 100;
+	UPROPERTY(BlueprintReadOnly)
+		int MaxHealth = 100;
+	UPROPERTY(BlueprintReadOnly)
+		int NumBombs = 1;
 
 	//stats
 	int MovementSpeed = 300;
@@ -84,6 +88,8 @@ public:
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<ABomb> CharacterBomb;
 
+	UFUNCTION(BlueprintCallable)
+	void TakeDamage(int Damage);
 
 	//void ComsumePowerUp(TSubClassOf<APowerUp> PowerUpClass);
 };

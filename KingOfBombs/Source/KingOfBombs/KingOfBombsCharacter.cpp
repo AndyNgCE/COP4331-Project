@@ -85,6 +85,11 @@ void AKingOfBombsCharacter::SpawnBomb()
 	ABomb* Bomb = GetWorld()->SpawnActor<ABomb>(CharacterBomb.Get(),Location,this->GetActorRotation());
 }
 
+void AKingOfBombsCharacter::TakeDamage(int Damage)
+{
+	CurrentHealth -= Damage;
+}
+
 
 void AKingOfBombsCharacter::OnResetVR()
 {
