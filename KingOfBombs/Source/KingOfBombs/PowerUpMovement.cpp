@@ -15,9 +15,9 @@ void APowerUpMovement::OnPick(AKBPlayer* target)
 	if (target != nullptr)
 	{
 		// Increase speed
-		target->MovementSpeed = target->MovementSpeed + 2000;
+		target->MovementSpeed = target->MovementSpeed + 1400;
 		target->GetCharacterMovement()->MaxWalkSpeed = target->MovementSpeed;
-		target->GetCharacterMovement()->JumpZVelocity= 2000;
+		target->GetCharacterMovement()->JumpZVelocity= 1400;
 		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("Movement Speed Up")));
 	}
 }

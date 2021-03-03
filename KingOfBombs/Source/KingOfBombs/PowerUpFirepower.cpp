@@ -12,7 +12,7 @@ void APowerUpFirepower::OnPick(AKBPlayer* target)
 {
 	if (target != nullptr)
 	{
-		// Increase damage range
+		// Increase damage range; will require access to bomb.h?
 		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, FString(TEXT("Bigger Explosions!")));
 	}
 }
