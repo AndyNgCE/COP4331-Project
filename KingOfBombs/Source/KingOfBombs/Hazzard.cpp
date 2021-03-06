@@ -18,6 +18,9 @@ AHazzard::AHazzard()
 	mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	mesh->SetupAttachment(RootComponent);
 	CollisionMesh->OnComponentBeginOverlap.AddDynamic(this, &AHazzard::OnOverlapBegin);
+	CollisionMesh->OnComponentEndOverlap.AddDynamic(this, &AHazzard::OnOverlapEnd);
+
+	//CollisionMesh->bGenerateOverlapEvents = true;
 }
 
 // Called when the game starts or when spawned
@@ -36,17 +39,33 @@ void AHazzard::Tick(float DeltaTime)
 
 void AHazzard::AffectPlayer(AKBPlayer* OtherActor)
 {
+	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("hazzard effect")));
 
+}
+
+void AHazzard::AffectPlayerEnd(AKBPlayer* OtherActor)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("hazzard effect end")));
 }
 
 void AHazzard::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
 	//AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
-	//GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, FString::FromInt(player->CurrentHealth));
+	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("hazzard overlap begin")));
 	if (player)
 	{
 		AffectPlayer(player);
+	}
+}
+
+void AHazzard::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("hazzard overlap end")));
+	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
+	if (player)
+	{
+		AffectPlayerEnd(player);
 	}
 }
 
