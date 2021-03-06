@@ -3,13 +3,17 @@
 
 #include "Bomb.h"
 
+
 // Sets default values for this component's properties
 ABomb::ABomb()
 {
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryActorTick.bCanEverTick = true;
-	
+	bombSize = 1;
+	detonationTime = 3.0;
+	seconds = 3.0;
+	bombType = "default";
 	// ...
 }
 
@@ -28,15 +32,19 @@ void ABomb::BeginPlay()
 // 30 frames per second
 void ABomb::Tick(float DeltaTime)
 {
-	bool timer = false;
-	if (DeltaTime == 60) {
-		timer = true;
+	Super::Tick(DeltaTime);
+
+	if (DeltaTime >= detonationTime) {
+		Explosion();
 	}
 
-	if (timer == true) {
-		Destroy();
-	}
-	Super::Tick(DeltaTime);
-	
-	
+
+}
+
+void ABomb::Explosion()
+{
+	FVector Location = this->GetActorLocation();
+	AbombHitBox* hitbox = GetWorld()->SpawnActor<AbombHitBox>(BombHitBox.Get(), Location, this->GetActorRotation());
+	Destroy();
+
 }

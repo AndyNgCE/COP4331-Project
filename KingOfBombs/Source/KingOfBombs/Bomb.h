@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 
-
+#include <KingOfBombs/bombHitBox.h>
 #include "Bomb.generated.h"
 
 
@@ -18,10 +18,6 @@ class KINGOFBOMBS_API ABomb : public AActor
 public:	
 	// Sets default values for this component's properties
 	ABomb();
-	
-	//Initial Bomb Stats
-	int bombSize = 1;
-	FString bombType = "default";
 
 
 	UPROPERTY(VisibleAnywhere)
@@ -35,5 +31,14 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void Explosion();
 
+	//Initial Bomb Stats
+	int bombSize = 1;
+	float seconds = 3.0;
+	float detonationTime = 3.0;
+	FString bombType = "default";
+
+	UPROPERTY(EditDefaultsOnly)
+		TSubclassOf<AbombHitBox> BombHitBox;
 };
