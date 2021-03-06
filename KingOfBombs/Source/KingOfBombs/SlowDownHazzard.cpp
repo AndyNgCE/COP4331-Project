@@ -9,7 +9,6 @@ void ASlowDownHazzard::AffectPlayer(AKBPlayer* OtherActor)
 {
 	if (OtherActor != nullptr)
 	{
-		isSlow = 1;
 		// Decrease speed
 		OtherActor->MovementSpeed -= 150;
 		OtherActor->GetCharacterMovement()->MaxWalkSpeed = OtherActor->MovementSpeed;
