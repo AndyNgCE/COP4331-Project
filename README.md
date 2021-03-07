@@ -110,7 +110,7 @@ Jordan Edelman (Joredelma) - Children class for Hazard.cpp; (Teleport, Damage, I
 [System Architecture](https://github.com/AndyNgCE/COP4331-Project/blob/main/artifact/DesignDocument.md)\
 [Source Code](https://github.com/AndyNgCE/COP4331-Project/tree/main/KingOfBombs/Source/KingOfBombs)\
 [Tests](https://github.com/AndyNgCE/COP4331-Project/blob/main/Tests.md)\
-[Demonstration]
+[Demonstration](https://youtu.be/Xah8ho1aiQE)
 
 # Task Allocation
 Zach (ZachKuj) - 
