@@ -117,7 +117,7 @@ Zach (ZachKuj) -
 
 Andy Nguyen (AndyNgCE) - 
 
-Gabriel Barcenas (Gbarc1002) - 
+Gabriel Barcenas (Gbarc1002) - Progressed in Bomb.cpp completion, and hitbox.cpp created
 
 Tevfik Koyun (tevfikkoyun) - 
 
