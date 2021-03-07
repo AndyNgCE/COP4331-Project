@@ -57,3 +57,15 @@ No | Steps to Reproduce | Expected Behavior
 ## Power-Up Pickup - Automated Test
 Expectant behavior:
 On Power-Up grab, a line should be printed on the screen automatically indicating action.
+
+## Hazard(All) - Manual Test
+No | Steps to Reproduce | Expected Behavior
+--|--------------|-------------------------
+1 | Move player onto hazard | Player effect is applied.
+2 | Wait several seconds | No additional effect is applied.
+3 | Move player off hazard | Hazard effect removed.
+
+## Hazard(All) - Automated Test
+Expectant behavior:
+On hazards contact with player character, a debug message will display.
+Once player ceases contact, a different debug message displays.
