@@ -121,7 +121,7 @@ Gabriel Barcenas (Gbarc1002) -
 
 Tevfik Koyun (tevfikkoyun) - 
 
-Jordan Edelman (Joredelma) - 
+Jordan Edelman (Joredelma) - Children class for Hazard.cpp; (Teleport, Ice)
 
 # Sprint 6
 
