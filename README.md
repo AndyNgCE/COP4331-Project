@@ -115,11 +115,11 @@ Jordan Edelman (Joredelma) - Children class for Hazard.cpp; (Teleport, Damage, I
 # Task Allocation
 Zach (ZachKuj) - 
 
-Andy Nguyen (AndyNgCE) - 
+Andy Nguyen (AndyNgCE) - Timer for power ups and blueprint on the basic map layouts to use game modes.
 
 Gabriel Barcenas (Gbarc1002) - Progressed in Bomb.cpp completion, and hitbox.cpp created
 
-Tevfik Koyun (tevfikkoyun) - 
+Tevfik Koyun (tevfikkoyun) - Created a UI mein menu and design it. 
 
 Jordan Edelman (Joredelma) - Children class for Hazard.cpp; (Teleport, Ice)
 
