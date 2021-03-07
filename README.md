@@ -104,8 +104,24 @@ Tevfik Koyun (tevfikkoyun) - Child class for block.cpp; (Destroyable Block)
 Jordan Edelman (Joredelma) - Children class for Hazard.cpp; (Teleport, Damage, Ice, Slow)
 
 # Sprint 5
+[Trello Board](https://trello.com/b/QNCct5eq/king-of-bombs)\
+[Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)\
+[Velocity Chart](https://docs.google.com/spreadsheets/d/1KRNAfiRvPILEtd5-9JKQYyp52EXsUcwrr4NSR5S0dHY/edit?usp=sharing)\
+[System Architecture](https://github.com/AndyNgCE/COP4331-Project/blob/main/artifact/DesignDocument.md)\
+[Source Code](https://github.com/AndyNgCE/COP4331-Project/tree/main/KingOfBombs/Source/KingOfBombs)\
+[Tests](https://github.com/AndyNgCE/COP4331-Project/blob/main/Tests.md)\
+[Demonstration]
 
 # Task Allocation
+Zach (ZachKuj) - 
+
+Andy Nguyen (AndyNgCE) - 
+
+Gabriel Barcenas (Gbarc1002) - 
+
+Tevfik Koyun (tevfikkoyun) - 
+
+Jordan Edelman (Joredelma) - 
 
 # Sprint 6
 
