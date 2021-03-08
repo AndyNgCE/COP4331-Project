@@ -113,7 +113,7 @@ Jordan Edelman (Joredelma) - Children class for Hazard.cpp; (Teleport, Damage, I
 [Demonstration](https://youtu.be/Xah8ho1aiQE)
 
 # Task Allocation
-Zach (ZachKuj) - 
+Zach (ZachKuj) - Character.cpp, hitbox blueprints, and assisting others
 
 Andy Nguyen (AndyNgCE) - Timer for power ups and blueprint on the basic map layouts to use game modes.
 
