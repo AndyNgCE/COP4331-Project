@@ -20,7 +20,11 @@ AHazzard::AHazzard()
 	CollisionMesh->OnComponentBeginOverlap.AddDynamic(this, &AHazzard::OnOverlapBegin);
 	CollisionMesh->OnComponentEndOverlap.AddDynamic(this, &AHazzard::OnOverlapEnd);
 
-	//CollisionMesh->bGenerateOverlapEvents = true;
+	mesh2 = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("reciever mesh"));
+	mesh2->SetRelativeLocation(FVector(720.f, 720.f, 520.f));
+	CollisionMesh2 = CreateDefaultSubobject<UBoxComponent>(FName("reciever collision"));
+	CollisionMesh2->SetRelativeLocation(FVector(720.f, 720.f, 520.f));
+	CollisionMesh2->SetBoxExtent(FVector(32.f, 32.f, 12.f));
 }
 
 // Called when the game starts or when spawned

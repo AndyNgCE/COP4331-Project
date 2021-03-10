@@ -28,7 +28,13 @@ public:
 		class UStaticMeshComponent* mesh;
 
 	UPROPERTY(EditAnywhere)
+		class UStaticMeshComponent* mesh2;
+
+	UPROPERTY(EditAnywhere)
 		class UBoxComponent* CollisionMesh = nullptr;
+
+	UPROPERTY(EditAnywhere)
+		class UBoxComponent* CollisionMesh2 = nullptr;
 
 	UFUNCTION()
 		virtual void AffectPlayer(AKBPlayer* OtherActor);
@@ -41,5 +47,4 @@ public:
 	
 	UFUNCTION()
 		void OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-
 };

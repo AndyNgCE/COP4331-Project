@@ -17,6 +17,5 @@ class KINGOFBOMBS_API ATeleportHazzard : public AHazzard
 
 	void AffectPlayer(AKBPlayer* OtherActor) override;
 	
-	void AffectPlayerEnd(AKBPlayer* OtherActor) override;
-
+	//void AffectPlayerEnd(AKBPlayer* OtherActor) override;
 };
