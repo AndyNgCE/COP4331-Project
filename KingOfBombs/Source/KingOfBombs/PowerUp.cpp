@@ -64,7 +64,9 @@ void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Other
 		if (player)
 		{
 			OnPick(player);
-			Destroy();
+			Equipped = true;
+			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Orange, FString(TEXT("Equipped")));
+			//Destroy();
 		}
 	}
 }

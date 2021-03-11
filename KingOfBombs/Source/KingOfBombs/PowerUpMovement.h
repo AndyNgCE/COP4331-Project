@@ -17,6 +17,8 @@ class KINGOFBOMBS_API APowerUpMovement : public APowerUp
 
 public:
 	APowerUpMovement();
+
+	void Tick(float DeltaTime) override;
 	
 	void OnPick(AKBPlayer* target) override;
 };
