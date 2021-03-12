@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Bomb.h"
 #include "KingOfBombsCharacter.generated.h"
 
 UCLASS(config=Game)
@@ -68,5 +69,28 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+
+	UPROPERTY(BlueprintReadOnly)
+	int Lives = 3;
+	UPROPERTY(BlueprintReadOnly)
+		int CurrentHealth = 100;
+	UPROPERTY(BlueprintReadOnly)
+		int MaxHealth = 100;
+	UPROPERTY(BlueprintReadOnly)
+		int NumBombs = 1;
+
+	//stats
+	int MovementSpeed = 300;
+
+	void SpawnBomb();
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<ABomb> CharacterBomb;
+
+	UFUNCTION(BlueprintCallable)
+	void TakeDamage(int Damage);
+
+	//void ComsumePowerUp(TSubClassOf<APowerUp> PowerUpClass);
 };
 

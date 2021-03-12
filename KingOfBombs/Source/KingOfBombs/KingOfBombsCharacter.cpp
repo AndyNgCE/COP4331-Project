@@ -74,6 +74,20 @@ void AKingOfBombsCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 
 	// VR headset functionality
 	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AKingOfBombsCharacter::OnResetVR);
+
+	PlayerInputComponent->BindAction("SpawnBomb", IE_Pressed, this, &AKingOfBombsCharacter::SpawnBomb);
+}
+
+void AKingOfBombsCharacter::SpawnBomb()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Spawning Bomb"));
+	FVector Location = this->GetActorLocation() + this->GetActorForwardVector() * 200;
+	ABomb* Bomb = GetWorld()->SpawnActor<ABomb>(CharacterBomb.Get(),Location,this->GetActorRotation());
+}
+
+void AKingOfBombsCharacter::TakeDamage(int Damage)
+{
+	CurrentHealth -= Damage;
 }
 
 
