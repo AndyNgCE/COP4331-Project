@@ -19,6 +19,5 @@ void APowerUpFirepower::OnPick(AKBPlayer* target)
 		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, FString(TEXT("Bigger Explosions!")));
 		// Place holder destroy until work stat affects are implemented
 		Destroy();
-		// SetActorTickEnabled(false);
 	}
 }
