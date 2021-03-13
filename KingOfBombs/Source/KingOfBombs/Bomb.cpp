@@ -2,6 +2,8 @@
 
 
 #include "Bomb.h"
+#include <Runtime/Engine/Private/Components/BoxComponent.cpp>
+
 
 
 // Sets default values for this component's properties
@@ -10,10 +12,11 @@ ABomb::ABomb()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryActorTick.bCanEverTick = true;
-	bombSize = 1;
-	detonationTime = 3.0;
-	seconds = 3.0;
-	bombType = "default";
+	
+	static ConstructorHelpers::FObjectFinder<UStaticMesh>MeshAsset(TEXT("StaticMesh'/Engine/BasicShapes/Sphere.Sphere'"));
+	UStaticMesh* Asset = MeshAsset.Object;
+
+	Mesh->SetStaticMesh(Asset);
 	// ...
 }
 
@@ -28,14 +31,16 @@ void ABomb::BeginPlay()
 }
 
 
-// Called every frame
-// 30 frames per second
+// Called every frames
 void ABomb::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (DeltaTime >= detonationTime) {
-		Explosion();
+	detonationTime -= 1;
+
+	if (detonationTime <= 0) {
+		Destroy();
+		//Explosion();
 	}
 
 
@@ -43,8 +48,14 @@ void ABomb::Tick(float DeltaTime)
 
 void ABomb::Explosion()
 {
-	FVector Location = this->GetActorLocation();
-	AbombHitBox* hitbox = GetWorld()->SpawnActor<AbombHitBox>(BombHitBox.Get(), Location, this->GetActorRotation());
+	
+	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ExplosionEffect, GetActorLocation());
 	Destroy();
 
+}
+
+void ABomb::generateHitBox()
+{
+	FVector Location = this->GetActorLocation();
+	AbombHitBox* hitbox = GetWorld()->SpawnActor<AbombHitBox>(BombHitBox.Get(), Location, this->GetActorRotation());
 }
