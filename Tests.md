@@ -54,6 +54,14 @@ No | Steps to Reproduce | Expected Behavior
 3 | Press right or "D" on keyboard to move right | Power-Up despawns and affilated effect applies.
 4 | Press left or "A" on keyboard to move left | Power-Up despawns and affilated effect applies.
 
+## Power-Up Pickup Timer - Manual Test
+No | Steps to Reproduce | Expected Behavior
+--|--------------|-------------------------
+1 | Press forward or "W" on keyboard to walk forward towards Power-Up Movement | Power-Up Movement becomes hidden in-game and affilated effect applies and deactivates after 20 in-game frames.
+2 | Press down or "S" on keyboard to walk backwards Power-Up Movement | Power-Up Movement becomes hidden in-game and affilated effect applies and deactivates after 20 in-game frames.
+3 | Press right or "D" on keyboard to move right Power-Up Movement | Power-Up Movement becomes hidden in-game and affilated effect applies and deactivates after 20 in-game frames.
+4 | Press left or "A" on keyboard to move left Power-Up Movement | Power-Up Movement becomes hidden in-game and affilated effect applies and deactivates after 20 in-game frames.
+
 ## Power-Up Pickup - Automated Test
 Expectant behavior:
 On Power-Up grab, a line should be printed on the screen automatically indicating action.
