@@ -77,3 +77,10 @@ No | Steps to Reproduce | Expected Behavior
 Expectant behavior:
 On hazards contact with player character, a debug message will display.
 Once player ceases contact, a different debug message displays.
+
+## TeleportHazard - Manual Test
+No | Steps to Reproduce | Expected Behavior
+--|--------------|-------------------------
+1 | Move player onto hazard | Player is teleported.
+2 | Wait several seconds | No additional effect is applied.
+3 | Move player onto hazard again | Player is teleported to same spot as before.
