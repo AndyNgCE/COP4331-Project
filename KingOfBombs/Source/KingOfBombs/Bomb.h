@@ -31,10 +31,17 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(VisibleAnywhere)
+		UStaticMeshComponent* BombMesh;
+
+	UPROPERTY(VisibleAnywhere)
+		class USphereComponent* Collisionbox;
+
 	void Explosion();
 
 	//Initial Bomb Stats
 	int bombSize = 1;
+	float Radius = 53.0f;
 	float seconds = 3.0;
 	float detonationTime = 3.0;
 	FString bombType = "default";

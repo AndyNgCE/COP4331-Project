@@ -20,7 +20,7 @@ AMake_Block::AMake_Block()
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	Mesh->SetupAttachment(RootComponent);
 
-	CollisionMesh->OnComponentBeginOverlap.AddDynamic(this, &AMake_Block::OnOverlapBegin);
+//	CollisionMesh->OnComponentBeginOverlap.AddDynamic(this, &AMake_Block::OnOverlapBegin);
 
 }
 
@@ -34,19 +34,19 @@ void AMake_Block::BeginPlay()
 // Called every frame
 void AMake_Block::Tick(float DeltaTime)
 {
-	/*Super::Tick(DeltaTime);
-	if (health == 0)
+	Super::Tick(DeltaTime);
+	/*if (health == 0)
 	{
 		Destroy();
 	}*/
 }
 
-void AMake_Block::KillBlock()
+/*void AMake_Block::KillBlock()
 {
 	health--;
-}
+}*/
 
-void AMake_Block::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+/*void AMake_Block::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	AbombHitBox * hitter = Cast<AbombHitBox>(OtherActor);
 	ABomb * ball = Cast<ABomb>(OtherActor);
@@ -59,4 +59,4 @@ void AMake_Block::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 			Destroy();
 		//}
 	}
-}
+}*/
