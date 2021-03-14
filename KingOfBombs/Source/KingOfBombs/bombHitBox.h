@@ -20,7 +20,15 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
+	UPROPERTY(VisibleAnywhere)
+		UStaticMeshComponent* Mesh;
+
+	UPROPERTY(VisibleAnywhere)
+		class USphereComponent* Collisionbox;
+
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	float BlastRadius;
+
+	float Radius = 53.0f;
 };

@@ -3,8 +3,7 @@
 
 #include "BreakableBlock.h"
 
-ABreakableBlock::ABreakableBlock() {
-
-	int health = 1;
+ABreakableBlock::ABreakableBlock()
+{
+	health = 1;
 }
-
