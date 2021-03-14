@@ -31,11 +31,5 @@ public:
 	UPROPERTY(EditAnywhere)
 		class UBoxComponent* CollisionMesh;
 
-	UFUNCTION()
-		void KillBlock();
-	
-	UFUNCTION()
-		void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-
 	int health = -1;
 };
