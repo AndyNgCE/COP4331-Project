@@ -29,7 +29,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void Explosion();
+	
 
 	//Initial Bomb Stats
 	int bombSize = 1;
@@ -49,4 +49,5 @@ public:
 		class USphereComponent* Collision;
 
 	void generateHitBox();
+	void Explosion();
 };

@@ -20,6 +20,7 @@ ABomb::ABomb()
 
 	Collision = CreateDefaultSubobject<USphereComponent>(FName("SphereComponent"));
 	Collision->InitSphereRadius(radius);
+	Collision->SetCollisionProfileName("Pain");
 	RootComponent = Collision;
 
 	Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
