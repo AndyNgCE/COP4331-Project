@@ -2,7 +2,8 @@
 
 
 #include "Bomb.h"
-
+#include "Components/SphereComponent.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 // Sets default values for this component's properties
 ABomb::ABomb()
@@ -14,6 +15,16 @@ ABomb::ABomb()
 	detonationTime = 3.0;
 	seconds = 3.0;
 	bombType = "default";
+
+	// Collision box set-up in shape of a sphere
+	Collisionbox = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
+	Collisionbox->InitSphereRadius(Radius);
+	Collisionbox->SetCollisionProfileName("Trigger");
+	RootComponent = Collisionbox;
+
+	// Attaches a static mesh for materials to the sphere component called Collisonbox
+	BombMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+	BombMesh->SetupAttachment(RootComponent);
 	// ...
 }
 
