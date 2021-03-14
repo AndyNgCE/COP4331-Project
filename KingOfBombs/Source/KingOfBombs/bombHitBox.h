@@ -20,22 +20,15 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
+	UPROPERTY(VisibleAnywhere)
+		UStaticMeshComponent* Mesh;
 
 	UPROPERTY(VisibleAnywhere)
 		class USphereComponent* Collisionbox;
 
-	UPROPERTY(VisibleAnywhere)
-		UStaticMeshComponent* Mesh;
-
-	UFUNCTION()
-		void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-
-	//Bomb Explosion Radius
-	//Is set to change when spawned
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
 	float BlastRadius;
-	float LingerTime = 1.f;
 
+	float Radius = 53.0f;
 };

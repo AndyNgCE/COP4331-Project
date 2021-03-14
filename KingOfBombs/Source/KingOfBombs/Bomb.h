@@ -4,22 +4,24 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "Runtime/Engine/Classes/Kismet/GameplayStatics.h"
-#include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
+
 #include <KingOfBombs/bombHitBox.h>
 #include "Bomb.generated.h"
 
 
-UCLASS( ClassGroup = (Custom), meta = (BlueprintSpawnableComponent) )
+
+UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class KINGOFBOMBS_API ABomb : public AActor
 {
 	GENERATED_BODY()
-
 
 public:	
 	// Sets default values for this component's properties
 	ABomb();
 
+
+	UPROPERTY(VisibleAnywhere)
+		UStaticMeshComponent* Mesh;
 
 protected:
 	// Called when the game starts
@@ -33,20 +35,10 @@ public:
 
 	//Initial Bomb Stats
 	int bombSize = 1;
-	float radius = 50.0f;
+	float seconds = 3.0;
 	float detonationTime = 3.0;
 	FString bombType = "default";
 
 	UPROPERTY(EditDefaultsOnly)
 		TSubclassOf<AbombHitBox> BombHitBox;
-
-	UParticleSystem* ExplosionEffect;
-
-	UPROPERTY(VisibleAnywhere)
-		UStaticMeshComponent* Mesh;
-
-	UPROPERTY(VisibleAnywhere)
-		class USphereComponent* Collision;
-
-	void generateHitBox();
 };
