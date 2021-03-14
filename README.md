@@ -134,6 +134,16 @@ Jordan Edelman (Joredelma) - Children class for Hazard.cpp; (Teleport, Ice)
 
 # Task Allocation
 
+Zach (ZachKuj) - Player stat integration between powerups and hazards
+
+Andy Nguyen (AndyNgCE) - Timer for power ups and blueprint on the basic map layouts to use game modes. Debugged bombs.
+
+Gabriel Barcenas (Gbarc1002) - Worked on hitbox collision functions and gave bombs meshes
+
+Tevfik Koyun (tevfikkoyun) - Working on UI
+
+Jordan Edelman (Joredelma) - Worked on teleport hazard
+
 # Sprint 7
 
 # Task Allocation
