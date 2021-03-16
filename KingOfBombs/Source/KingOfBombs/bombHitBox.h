@@ -29,6 +29,12 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	float BlastRadius;
-
 	float Radius = 53.0f;
+	float LingerTime = 1.f; //Idea is that we should give it a period of time to let the explosion last before the hitbox disappears
+
+	//For the collision of the explosion so people get hurt
+	UFUNCTION()
+		void OnOverlapBegin(class UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+
 };
