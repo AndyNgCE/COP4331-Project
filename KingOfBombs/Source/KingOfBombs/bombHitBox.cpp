@@ -38,3 +38,35 @@ void AbombHitBox::Tick(float DeltaTime)
 
 }
 
+//What happens when caught within explosion radius
+//Please check over for errors before reverting code from comment
+void AbombHitBox::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	/*
+	//Two Points Needed, the center of the explosion, and the actor within the blast radius
+	//Initializing locations
+	FVector OriginLocation, ActorLocation;
+	OriginLocation = this->GetTargetLocation();
+	ActorLocation = OtherActor->GetTargetLocation();
+
+	//Casting to check if actor hit fits one of the two categories
+	AKingOfBombsCharacter* loser = Cast<AKingOfBombsCharacter>(OtherActor);
+	AMake_Block* block = Cast<AMake_Block>(OtherActor);
+
+	FHitResult Casualty = SweepResult;
+
+	//Actual raytracing part, does need checking
+	if (GetWorld()->LineTraceSingleByObjectType(Casualty, OriginLocation, ActorLocation, ECC_WorldStatic, BlastRadius)) { //Should return a bool according to function description
+		if (OtherActor == loser || OtherActor == block) {
+			//In case of character getting hit
+			if (OtherActor == loser) {
+				loser->CurrentHealth -= 25;
+			}
+			//In case a block gets hit
+			else {
+				block->health -= 1;
+			}
+		}
+	}
+	*/
+}
