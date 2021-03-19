@@ -5,6 +5,8 @@
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "KingOfBombsCharacter.h"
+#include "make_block.h"
 
 // Sets default values
 AbombHitBox::AbombHitBox()
@@ -54,9 +56,10 @@ void AbombHitBox::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 	AMake_Block* block = Cast<AMake_Block>(OtherActor);
 
 	FHitResult Casualty = SweepResult;
+	bool hit = GetWorld()->LineTraceSingleByObjectType(Casualty, OriginLocation, ActorLocation, ECC_WorldStatic);
 
 	//Actual raytracing part, does need checking
-	if (GetWorld()->LineTraceSingleByObjectType(Casualty, OriginLocation, ActorLocation, ECC_WorldStatic, BlastRadius)) { //Should return a bool according to function description
+	if (hit) { //Should return a bool according to function description
 		if (OtherActor == loser || OtherActor == block) {
 			//In case of character getting hit
 			if (OtherActor == loser) {

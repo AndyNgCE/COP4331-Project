@@ -25,6 +25,11 @@ ABomb::ABomb()
 	// Attaches a static mesh for materials to the sphere component called Collisonbox
 	BombMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
 	BombMesh->SetupAttachment(RootComponent);
+	BombMesh->SetCollisionProfileName(TEXT("Actor"));
+	BombMesh->SetCollisionEnabled(ECollisionEnabled::Type::QueryAndPhysics);
+	BombMesh->SetSimulatePhysics(true);
+	
+
 	// ...
 }
 
