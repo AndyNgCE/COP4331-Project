@@ -41,6 +41,11 @@ void AMake_Block::Tick(float DeltaTime)
 	}*/
 }
 
+int AMake_Block::GetHealth()
+{
+	return health;
+}
+
 /*void AMake_Block::KillBlock()
 {
 	health--;

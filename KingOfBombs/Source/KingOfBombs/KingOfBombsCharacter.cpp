@@ -54,8 +54,8 @@ void AKingOfBombsCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 {
 	// Set up gameplay key bindings
 	check(PlayerInputComponent);
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	//PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
+	//PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &AKingOfBombsCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AKingOfBombsCharacter::MoveRight);
@@ -83,6 +83,8 @@ void AKingOfBombsCharacter::SpawnBomb()
 	UE_LOG(LogTemp, Warning, TEXT("Spawning Bomb"));
 	FVector Location = this->GetActorLocation() + this->GetActorForwardVector() * 200;
 	ABomb* Bomb = GetWorld()->SpawnActor<ABomb>(CharacterBomb.Get(),Location,this->GetActorRotation());
+	
+	Bomb->BombMesh->AddImpulse(this->GetActorForwardVector() * 1000, NAME_None, true);
 }
 
 void AKingOfBombsCharacter::TakeDamage(int Damage)

@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 
-#include <KingOfBombs/bombHitBox.h>
+
 #include "Bomb.generated.h"
 
 
@@ -20,8 +20,8 @@ public:
 	ABomb();
 
 
-	UPROPERTY(VisibleAnywhere)
-		UStaticMeshComponent* Mesh;
+	//UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+		//UStaticMeshComponent* Mesh;
 
 protected:
 	// Called when the game starts
@@ -31,11 +31,8 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		UStaticMeshComponent* BombMesh;
-
-	UPROPERTY(VisibleAnywhere)
-		class USphereComponent* Collisionbox;
 
 	void Explosion();
 
@@ -44,8 +41,9 @@ public:
 	float Radius = 53.0f;
 	float seconds = 3.0;
 	float detonationTime = 3.0;
+	float detonationCounter = 0;
 	FString bombType = "default";
 
 	UPROPERTY(EditDefaultsOnly)
-		TSubclassOf<AbombHitBox> BombHitBox;
+		TSubclassOf<class AbombHitBox> BombHitBox;
 };

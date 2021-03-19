@@ -4,6 +4,7 @@
 #include "Bomb.h"
 #include "Components/SphereComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "bombHitBox.h"
 
 // Sets default values for this component's properties
 ABomb::ABomb()
@@ -16,14 +17,8 @@ ABomb::ABomb()
 	seconds = 3.0;
 	bombType = "default";
 
-	// Collision box set-up in shape of a sphere
-	Collisionbox = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComponent"));
-	Collisionbox->InitSphereRadius(Radius);
-	Collisionbox->SetCollisionProfileName("Trigger");
-	RootComponent = Collisionbox;
-
 	// Attaches a static mesh for materials to the sphere component called Collisonbox
-	BombMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
+	BombMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BombMesh"));
 	BombMesh->SetupAttachment(RootComponent);
 	BombMesh->SetCollisionProfileName(TEXT("Actor"));
 	BombMesh->SetCollisionEnabled(ECollisionEnabled::Type::QueryAndPhysics);
@@ -50,7 +45,10 @@ void ABomb::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (DeltaTime >= detonationTime) {
+	detonationCounter += DeltaTime;
+
+	if (detonationCounter >= detonationTime) 
+	{
 		Explosion();
 	}
 
@@ -60,7 +58,11 @@ void ABomb::Tick(float DeltaTime)
 void ABomb::Explosion()
 {
 	FVector Location = this->GetActorLocation();
-	AbombHitBox* hitbox = GetWorld()->SpawnActor<AbombHitBox>(BombHitBox.Get(), Location, this->GetActorRotation());
+	this->SetActorEnableCollision(false);
+	BombMesh->SetCollisionEnabled(ECollisionEnabled::Type::NoCollision);
+	BombMesh->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
+	AbombHitBox* hitbox = GetWorld()->SpawnActor<AbombHitBox>(AbombHitBox::StaticClass(), Location, this->GetActorRotation());
+
 	Destroy();
 
 }

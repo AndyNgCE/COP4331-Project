@@ -16,4 +16,6 @@ class KINGOFBOMBS_API ABreakableBlock : public AMake_Block
 public:
 	ABreakableBlock();
 
+	void TakeDamage(int Damage);
+
 };
