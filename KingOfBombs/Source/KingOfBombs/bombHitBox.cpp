@@ -101,7 +101,8 @@ void AbombHitBox::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 			{
 				if (AKingOfBombsCharacter* loser = Cast<AKingOfBombsCharacter>(OtherActor))
 				{
-					loser->CurrentHealth -= 25;
+					//loser->CurrentHealth -= 25;
+					loser->TakeDamage(25);
 				}
 			}
 			else if (OtherActor->IsA<ABreakableBlock>())

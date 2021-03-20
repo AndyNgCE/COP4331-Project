@@ -90,6 +90,9 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void TakeDamage(int Damage);
+	
+	UPROPERTY(BlueprintReadWrite)
+		bool Dead = false;
 
 	//void ComsumePowerUp(TSubClassOf<APowerUp> PowerUpClass);
 };

@@ -84,12 +84,14 @@ void AKingOfBombsCharacter::SpawnBomb()
 	FVector Location = this->GetActorLocation() + this->GetActorForwardVector() * 200;
 	ABomb* Bomb = GetWorld()->SpawnActor<ABomb>(CharacterBomb.Get(),Location,this->GetActorRotation());
 	
-	Bomb->BombMesh->AddImpulse(this->GetActorForwardVector() * 1000, NAME_None, true);
+	Bomb->BombMesh->AddImpulse(this->GetActorForwardVector() * 100, NAME_None, true);
 }
 
 void AKingOfBombsCharacter::TakeDamage(int Damage)
 {
 	CurrentHealth -= Damage;
+	if(CurrentHealth <= 0)
+		Dead = true;
 }
 
 
