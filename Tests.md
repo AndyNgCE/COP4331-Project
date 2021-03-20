@@ -108,3 +108,7 @@ No | Steps to Reproduce | Expected Behavior
 3 | Click to Tutorial button | It will show the Tutorial page and Tutorial game mode
 4 | Click to Quit button | It will Quit the game
 5 | Settings and Tutorial pages has back button| It will open the main menu again
+
+## Bomb Pickup - Automated Test
+Expectant behavior:
+On Raycast emitting an collsion with actors (blocks, people, and power-ups), a debug message appears in the top left screen to deatil what actor(s) were hit.
