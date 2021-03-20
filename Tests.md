@@ -99,3 +99,12 @@ No | Steps to Reproduce | Expected Behavior
 9 | Hold shift and press right on keyboard | Moves right(camera locked) until reaching collision range of block
 10 | Player reaches block after moving backwards | Player movement stops
 11 | Move Player in direction of block | Player will stop before passing through any blocktype
+
+## UI Menu- Manual Test
+No | Steps to Reproduce | Expected Behavior
+--|--------------|-------------------------
+1 | Click to play button  | It will open the map
+2 | Click to Settings button | It will chance the game setings
+3 | Click to Tutorial button | It will show the Tutorial page and Tutorial game mode
+4 | Click to Quit button | It will Quit the game
+5 | Settings and Tutorial pages has back button| It will open the main menu again
