@@ -84,3 +84,18 @@ No | Steps to Reproduce | Expected Behavior
 1 | Move player onto hazard | Player is teleported.
 2 | Wait several seconds | No additional effect is applied.
 3 | Move player onto hazard again | Player is teleported to same spot as before.
+
+## BreakableBlock  - Manual Test
+No | Steps to Reproduce | Expected Behavior
+--|--------------|-------------------------
+1 | spawn a bomb neat to Breakable block | Breakable block will be destroy
+2 | Player can not pass to block | Player movement stops
+3 | Press up key on keyboard | Move forward until reaching collision range of block
+4 | Player reaches block after moving forward | Player movement stops
+5 | Press back key on keyboard | Move backwards until reaching collision range of block
+6 | Player reaches block after moving backwards | Player movement stops
+7 | Hold shift + press left on keyboard | Moves left(camera locked) until reaching collision range of block
+8 | Player reaches block after moving backwards | Player movement stops
+9 | Hold shift and press right on keyboard | Moves right(camera locked) until reaching collision range of block
+10 | Player reaches block after moving backwards | Player movement stops
+11 | Move Player in direction of block | Player will stop before passing through any blocktype
