@@ -7,17 +7,26 @@
 #include "PowerUpFirepower.h"
 #include "PowerUpBombUp.h"
 #include "PowerUpMovement.h"
+#include "DamageHazzard.h"
+#include "SlowDownHazzard.h"
 ABreakableBlock::ABreakableBlock()
 {
 	health = 100;
+	// ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprint(TEXT("Blueprint/Game/Items/Blueprints/BP_ItemTest.BP_ItemTest"));
 }
 
 void ABreakableBlock::TakeDamage(int Damage)
 {
+	/*if (ItemBlueprint.Object) {
+		MyItemBlueprint = (UClass*)ItemBlueprint.Object->GeneratedClass;
+	}*/
+
+	/*APowerUp* pup= World->SpawnActor<APowerUpHealth>(MyItemBlueprint, this->GetActorLocation(), this->GetActorRotation(), SpawnParams);*/
+
 	health -= Damage;
 	if (health <= 0)
 	{
-		int rand2 = FMath::RandRange(0, 3);
+		int rand2 = FMath::RandRange(0, 6);
 		int rand = FMath::RandRange(0, 3);
 		if (rand2 == 0)
 		{
@@ -36,6 +45,18 @@ void ABreakableBlock::TakeDamage(int Damage)
 			else if (rand == 3)
 			{
 				GetWorld()->SpawnActor<APowerUpMovement>(APowerUpMovement::StaticClass(), this->GetActorLocation(), this->GetActorRotation());
+			}
+			else if (rand == 4)
+			{
+				GetWorld()->SpawnActor<ADamageHazzard>(ADamageHazzard::StaticClass(), this->GetActorLocation(), this->GetActorRotation());
+			}
+			else if (rand == 5)
+			{
+				GetWorld()->SpawnActor<ASlowDownHazzard>(ASlowDownHazzard::StaticClass(), this->GetActorLocation(), this->GetActorRotation());
+			}
+			else if (rand == 6)
+			{
+				//Snare
 			}
 		}
 		

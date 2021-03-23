@@ -18,4 +18,5 @@ public:
 
 	void TakeDamage(int Damage);
 
+	//TSubclassOf<class APowerUp> MyItemBlueprint;
 };
