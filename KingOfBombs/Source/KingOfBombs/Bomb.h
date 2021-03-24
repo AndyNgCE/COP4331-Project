@@ -35,6 +35,8 @@ public:
 		UStaticMeshComponent* BombMesh;
 
 	void Explosion();
+	void SetExplosionSize(int size);
+
 
 	//Initial Bomb Stats
 	int bombSize = 1;
@@ -43,6 +45,10 @@ public:
 	float detonationTime = 3.0;
 	float detonationCounter = 0;
 	FString bombType = "default";
+
+	//Keeps track of who owns what bomb. Needs work
+	UPROPERTY(EditDefaultsOnly)
+		TSubclassOf<class AKingOfBombsCharacter> BombOwner;
 
 	UPROPERTY(EditDefaultsOnly)
 		TSubclassOf<class AbombHitBox> BombHitBox;
