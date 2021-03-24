@@ -15,7 +15,7 @@ void APowerUpFirepower::OnPick(AKBPlayer* target)
 		// Disables collision components
 		SetActorEnableCollision(false);
 		SetActorHiddenInGame(true);
-		// Increase damage range; will require access to bomb.h?
+		// Increase damage range; will require access to bomb.h? Most likely KBPlayer
 		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Yellow, FString(TEXT("Bigger Explosions!")));
 		// Place holder destroy until work stat affects are implemented
 		Destroy();

@@ -18,7 +18,7 @@ void APowerUpBombUp::OnPick(AKBPlayer* target)
 		SetActorEnableCollision(false);
 		SetActorHiddenInGame(true);
 		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Purple, FString(TEXT("More Explosions!")));
-		 Destroy();
+		Destroy();
 		//SetActorTickEnabled(false);
 	}
 }

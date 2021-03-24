@@ -15,11 +15,18 @@ void APowerUpHealth::OnPick(AKBPlayer* target)
 	if (target != nullptr)
 	{
 		// Increase health
-		target->CurrentHealth += 25;
-		// Disables collision components
-		SetActorEnableCollision(false);
-		SetActorHiddenInGame(true);
-		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, FString(TEXT("Healed One Point of Damage!")));
-		Destroy();
+		if (target->CurrentHealth != 100)
+		{
+			target->CurrentHealth += 25;
+			// Disables collision components
+			SetActorEnableCollision(false);
+			SetActorHiddenInGame(true);
+			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Green, FString(TEXT("Healed One Point of Damage!")));
+			Destroy();
+		}
+		else
+		{
+			;
+		}
 	}
 }

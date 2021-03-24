@@ -40,9 +40,7 @@ void APowerUpMovement::OnPick(AKBPlayer* target)
 		SetActorEnableCollision(false);
 		SetActorHiddenInGame(true);
 		// Increase speed
-		//target->MovementSpeed += target->MovementSpeed + 1400;
 		target->GetCharacterMovement()->MaxWalkSpeed += 1400;
-		//target->GetCharacterMovement()->JumpZVelocity = 1400;
 		GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("Movement Speed Up")));
 		if (Duration != 20)
 		{

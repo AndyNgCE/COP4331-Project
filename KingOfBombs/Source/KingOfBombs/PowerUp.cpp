@@ -4,6 +4,7 @@
 #include "PowerUp.h"
 #include "KBPlayer.h"
 #include "KingOfBombsCharacter.h"
+#include "Bomb.h"
 #include "Components/StaticMeshComponent.h"
 #include "Components/SphereComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
@@ -57,17 +58,19 @@ void APowerUp::Tick(float DeltaTime)
 void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	// Specifying which actor in the scene can trigger the destroy functions
-	//AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
+	//ABomb* impact = Cast<ABomb>(OtherActor);
 	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
-	//if (impact)
-	//{
 		if (player)
 		{
 			OnPick(player);
 			Equipped = true;
 			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Orange, FString(TEXT("Equipped")));
 		}
-	//}
+		/*if(impact)
+		{
+			this->AddIgnoredActor(impact);
+		}*/
+		
 }
 
 // Use to print generic power up message - override to print specialized messages
