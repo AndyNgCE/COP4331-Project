@@ -5,6 +5,8 @@
 #include "Components/StaticMeshComponent.h"
 #include "KingOfBombsCharacter.h"
 #include "KBPlayer.h"
+#include "Particles/ParticleSystem.h"
+
 // Sets default values
 AHazzard::AHazzard()
 {
@@ -25,6 +27,8 @@ AHazzard::AHazzard()
 	CollisionMesh2 = CreateDefaultSubobject<UBoxComponent>(FName("reciever collision"));
 	CollisionMesh2->SetRelativeLocation(FVector(720.f, 720.f, 520.f));
 	CollisionMesh2->SetBoxExtent(FVector(32.f, 32.f, 12.f));
+
+	//PartComp = CreateDefaultSubobject<UParticleSystemComponent>(TEXT("BeamComp"));
 }
 
 // Called when the game starts or when spawned
@@ -43,20 +47,17 @@ void AHazzard::Tick(float DeltaTime)
 
 void AHazzard::AffectPlayer(AKBPlayer* OtherActor)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("hazzard effect")));
 
 }
 
 void AHazzard::AffectPlayerEnd(AKBPlayer* OtherActor)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("hazzard effect end")));
+
 }
 
 void AHazzard::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
-	//AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
-	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("hazzard overlap begin")));
 	if (player)
 	{
 		AffectPlayer(player);
@@ -65,7 +66,6 @@ void AHazzard::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* 
 
 void AHazzard::OnOverlapEnd(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex)
 {
-	GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("hazzard overlap end")));
 	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
 	if (player)
 	{

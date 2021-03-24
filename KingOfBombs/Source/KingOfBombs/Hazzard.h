@@ -36,6 +36,9 @@ public:
 	UPROPERTY(EditAnywhere)
 		class UBoxComponent* CollisionMesh2 = nullptr;
 
+	//UPROPERTY(VisibleAnywhere, Category = "ThrowPosition")
+	//	UParticleSystemComponent* PartComp;
+
 	UFUNCTION()
 		virtual void AffectPlayer(AKBPlayer* OtherActor);
 
