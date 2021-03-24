@@ -46,7 +46,7 @@ void APowerUp::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	// Displays the debug hitbox of the power-up
-	DrawDebugSphere(GetWorld(), GetActorLocation(), Radius, 20, FColor::Red, false, -1, 0, 1);
+	//DrawDebugSphere(GetWorld(), GetActorLocation(), Radius, 20, FColor::Red, false, -1, 0, 1);
 
 	// Sets the rotation of Power-Up
 	FQuat QuatRotation = FQuat(FRotator(Pitch, Yaw, Roll));
@@ -57,17 +57,17 @@ void APowerUp::Tick(float DeltaTime)
 void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	// Specifying which actor in the scene can trigger the destroy functions
-	AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
+	//AKingOfBombsCharacter* impact = Cast<AKingOfBombsCharacter>(OtherActor);
 	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
-	if (impact)
-	{
+	//if (impact)
+	//{
 		if (player)
 		{
 			OnPick(player);
 			Equipped = true;
 			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Orange, FString(TEXT("Equipped")));
 		}
-	}
+	//}
 }
 
 // Use to print generic power up message - override to print specialized messages
