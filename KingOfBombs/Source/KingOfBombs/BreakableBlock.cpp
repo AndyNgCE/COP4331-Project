@@ -12,16 +12,16 @@
 ABreakableBlock::ABreakableBlock()
 {
 	health = 100;
-	// ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprint(TEXT("Blueprint/Game/Items/Blueprints/BP_ItemTest.BP_ItemTest"));
+	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprint(TEXT("Blueprint'/Game/Blueprints/Health.Health'"));
+	if (ItemBlueprint.Object)
+	{
+		MyItemBlueprint = (UClass*)ItemBlueprint.Object->GeneratedClass;
+	}
 }
 
 void ABreakableBlock::TakeDamage(int Damage)
 {
-	/*if (ItemBlueprint.Object) {
-		MyItemBlueprint = (UClass*)ItemBlueprint.Object->GeneratedClass;
-	}*/
-
-	/*APowerUp* pup= World->SpawnActor<APowerUpHealth>(MyItemBlueprint, this->GetActorLocation(), this->GetActorRotation(), SpawnParams);*/
+	
 
 	health -= Damage;
 	if (health <= 0)
@@ -56,7 +56,7 @@ void ABreakableBlock::TakeDamage(int Damage)
 			}
 			else if (rand == 6)
 			{
-				//Snare
+				GetWorld()->SpawnActor<APowerUpHealth>(MyItemBlueprint, this->GetActorLocation(), this->GetActorRotation());
 			}
 		}
 		
