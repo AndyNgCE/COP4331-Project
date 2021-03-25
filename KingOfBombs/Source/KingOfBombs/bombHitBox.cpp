@@ -43,7 +43,6 @@ void AbombHitBox::BeginPlay()
 	Super::BeginPlay();
 	SpawnTime = GetWorld()->TimeSeconds;
 
-	//GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, "spawning bomb box");
 	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ExplosionVFX, this->GetActorLocation(), this->GetActorRotation(), FVector(3,3,3));
 }
 
@@ -51,7 +50,6 @@ void AbombHitBox::BeginPlay()
 void AbombHitBox::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	//UKismetSystemLibrary::DrawDebugSphere(GetWorld(), this->GetActorLocation(), 500);
 	if (GetWorld()->TimeSeconds - SpawnTime > .10f)
 	{
 		Destroy();
@@ -92,7 +90,6 @@ void AbombHitBox::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 	FCollisionQueryParams QParams;
 	QParams.AddIgnoredActor(this);
 
-	//UKismetSystemLibrary::DrawDebugLine(GetWorld(), this->GetActorLocation(), OtherActor->GetActorLocation(), FLinearColor::Red, 1, 10);
 	if (GetWorld()->LineTraceSingleByObjectType(Casualty, OriginLocation, ActorLocation, Params, QParams))
 	{ //Should return a bool according to function description
 
@@ -117,7 +114,7 @@ void AbombHitBox::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 		}
 		if (OtherActor->IsA<AKingOfBombsCharacter>())
 		{
-			//GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, Casualty.Actor->GetName());
+			
 		}
 		
 	}
