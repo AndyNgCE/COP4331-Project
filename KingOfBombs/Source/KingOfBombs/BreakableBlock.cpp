@@ -62,8 +62,8 @@ void ABreakableBlock::TakeDamage(int Damage)
 	health -= Damage;
 	if (health <= 0)
 	{
-		int rand2 = FMath::RandRange(0, 6);
-		int rand = FMath::RandRange(0, 3);
+		int rand2 = FMath::RandRange(0, 3);
+		int rand = FMath::RandRange(0, 7);
 		if (rand2 == 0)
 		{
 			if (rand == 0)
