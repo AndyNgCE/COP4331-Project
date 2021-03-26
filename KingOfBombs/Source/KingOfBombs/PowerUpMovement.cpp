@@ -19,9 +19,7 @@ void APowerUpMovement::Tick(float DeltaTime)
 		if (Duration <= 0)
 		{
 			// Fix player speed after power up ends
-			//reset->MovementSpeed -= reset->MovementSpeed - 1400;
 			reset->GetCharacterMovement()->MaxWalkSpeed -= 1400;
-			//reset->GetCharacterMovement()->JumpZVelocity = 600;
 			Equipped = false;
 			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Red, FString(TEXT("Speed Buff Wore Off!")));
 			SetActorTickEnabled(false);

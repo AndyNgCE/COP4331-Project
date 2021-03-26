@@ -17,6 +17,12 @@ public:
 	ABreakableBlock();
 
 	void TakeDamage(int Damage);
-
+	// Health item
 	TSubclassOf<class APowerUp> MyItemBlueprint;
+	// Movement item
+	TSubclassOf<class APowerUp> MyItemBlueprintMovement;
+	// Inventory item
+	TSubclassOf<class APowerUp> MyItemBlueprintInventory;
+	// Blast item
+	TSubclassOf<class APowerUp> MyItemBlueprintBlast;
 };
