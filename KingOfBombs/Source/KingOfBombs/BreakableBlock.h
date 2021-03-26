@@ -17,6 +17,7 @@ public:
 	ABreakableBlock();
 
 	void TakeDamage(int Damage);
+
 	// Health item
 	TSubclassOf<class APowerUp> MyItemBlueprint;
 	// Movement item
@@ -25,4 +26,11 @@ public:
 	TSubclassOf<class APowerUp> MyItemBlueprintInventory;
 	// Blast item
 	TSubclassOf<class APowerUp> MyItemBlueprintBlast;
+
+	// Damage Hazzard
+	TSubclassOf<class AHazzard> MyItemBlueprintDamageH;
+	// Freeze Hazzard
+	TSubclassOf<class AHazzard> MyItemBlueprintFreezeH;
+	// Slow Hazzard
+	TSubclassOf<class AHazzard> MyItemBlueprintSlowDownH;
 };

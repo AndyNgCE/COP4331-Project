@@ -9,6 +9,8 @@
 #include "PowerUpMovement.h"
 #include "DamageHazzard.h"
 #include "SlowDownHazzard.h"
+#include "FreezeHazzard.h"
+
 ABreakableBlock::ABreakableBlock()
 {
 	health = 100;
@@ -17,6 +19,11 @@ ABreakableBlock::ABreakableBlock()
 	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprintInventory(TEXT("Blueprint'/Game/Blueprints/InventoryUp.InventoryUp'"));
 	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprintBlast(TEXT("Blueprint'/Game/Blueprints/BlastIncrease.BlastIncrease'"));
 
+	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprintDamageH(TEXT("Blueprint'/Game/Blueprints/MyDamageHazzard.MyDamageHazzard'"));
+	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprintFreezeH(TEXT("Blueprint'/Game/Blueprints/MyFreezeHazzard.MyFreezeHazzard'"));
+	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprintSlowDownH(TEXT("Blueprint'/Game/Blueprints/MySlowDownHazzard.MySlowDownHazzard'"));
+
+	// Power-Up blueprints call
 	if (ItemBlueprint.Object)
 	{
 		MyItemBlueprint = (UClass*)ItemBlueprint.Object->GeneratedClass;
@@ -32,6 +39,20 @@ ABreakableBlock::ABreakableBlock()
 	if (ItemBlueprintBlast.Object)
 	{
 		MyItemBlueprintBlast = (UClass*)ItemBlueprintBlast.Object->GeneratedClass;
+	}
+
+	// Hazzard blueprints call
+	if (ItemBlueprintDamageH.Object)
+	{
+		MyItemBlueprintDamageH = (UClass*)ItemBlueprintDamageH.Object->GeneratedClass;
+	}
+	if (ItemBlueprintFreezeH.Object)
+	{
+		MyItemBlueprintFreezeH = (UClass*)ItemBlueprintFreezeH.Object->GeneratedClass;
+	}
+	if (ItemBlueprintSlowDownH.Object)
+	{
+		MyItemBlueprintSlowDownH = (UClass*)ItemBlueprintSlowDownH.Object->GeneratedClass;
 	}
 }
 
@@ -67,16 +88,17 @@ void ABreakableBlock::TakeDamage(int Damage)
 			}
 			else if (rand == 4)
 			{
-				//APowerUp* pup = GetWorld()->SpawnActor<APowerUpHealth>(MyItemBlueprint, this->GetActorLocation(), this->GetActorRotation());
-				GetWorld()->SpawnActor<ADamageHazzard>(ADamageHazzard::StaticClass(), this->GetActorLocation(), this->GetActorRotation());
+				AHazzard* cat = GetWorld()->SpawnActor<ADamageHazzard>(MyItemBlueprintDamageH, this->GetActorLocation(), this->GetActorRotation());
+				//GetWorld()->SpawnActor<ADamageHazzard>(ADamageHazzard::StaticClass(), this->GetActorLocation(), this->GetActorRotation());
 			}
 			else if (rand == 5)
 			{
-				GetWorld()->SpawnActor<ASlowDownHazzard>(ASlowDownHazzard::StaticClass(), this->GetActorLocation(), this->GetActorRotation());
+				AHazzard* cat = GetWorld()->SpawnActor<ASlowDownHazzard>(MyItemBlueprintSlowDownH, this->GetActorLocation(), this->GetActorRotation());
+				//GetWorld()->SpawnActor<ASlowDownHazzard>(ASlowDownHazzard::StaticClass(), this->GetActorLocation(), this->GetActorRotation());
 			}
 			else if (rand == 6)
 			{
-				GetWorld()->SpawnActor<APowerUpHealth>(MyItemBlueprint, this->GetActorLocation(), this->GetActorRotation());
+				AHazzard* cat = GetWorld()->SpawnActor<AFreezeHazzard>(MyItemBlueprintFreezeH, this->GetActorLocation(), this->GetActorRotation());
 			}
 		}
 		
