@@ -12,7 +12,7 @@ void AFreezeHazzard::AffectPlayer(AKBPlayer* OtherActor)
 	{
 		oldSpeed = OtherActor->GetCharacterMovement()->MaxWalkSpeed;
 		OtherActor->GetCharacterMovement()->MaxWalkSpeed = 0;
-		Duration = 1000;
+		Duration = 250;
 		froze = 1;
 	}
 }
