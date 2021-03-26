@@ -10,7 +10,7 @@ void ASlowDownHazzard::AffectPlayer(AKBPlayer* OtherActor)
 	if (OtherActor != nullptr)
 	{
 		// Decrease speed
-		OtherActor->GetCharacterMovement()->MaxWalkSpeed -= 150;
+		OtherActor->GetCharacterMovement()->MaxWalkSpeed /= 3;
 	}
 }
 
@@ -19,6 +19,6 @@ void ASlowDownHazzard::AffectPlayerEnd(AKBPlayer* OtherActor)
 	if (OtherActor != nullptr)
 	{
 		// Increase speed
-		OtherActor->GetCharacterMovement()->MaxWalkSpeed += 150;
+		OtherActor->GetCharacterMovement()->MaxWalkSpeed *= 3;
 	}
 }
