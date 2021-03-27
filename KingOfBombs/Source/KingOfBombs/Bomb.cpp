@@ -67,8 +67,8 @@ void ABomb::Explosion()
 
 //Call directly after spawning bomb
 //Size should be the bombsize variable in KingOfBombPlayer
-void ABomb::SetExplosionSize(int size)
+void ABomb::SetExplosionSize(int sizeLevel)
 {
-	bombSize = size;
+	bombSize = 250 * sizeLevel;
 }
 
