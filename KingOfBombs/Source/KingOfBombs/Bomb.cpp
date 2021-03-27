@@ -69,6 +69,9 @@ void ABomb::Explosion()
 //Size should be the bombsize variable in KingOfBombPlayer
 void ABomb::SetExplosionSize(int sizeLevel)
 {
-	bombSize = 250 * sizeLevel;
+	if (sizeLevel <= 3 && sizeLevel > 0)
+	{
+		bombSize = 250 * sizeLevel;
+	}
 }
 
