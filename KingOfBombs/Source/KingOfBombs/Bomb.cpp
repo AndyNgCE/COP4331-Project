@@ -60,13 +60,15 @@ void ABomb::Explosion()
 	BombMesh->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Ignore);
 	AbombHitBox* hitbox = GetWorld()->SpawnActor<AbombHitBox>(AbombHitBox::StaticClass(), Location, this->GetActorRotation());
 	//Seeing if hitbox size can change and still run the same
-	//hitbox->ChangeRadius(bombSize);
+	hitbox->ChangeRadius(bombSize);
 	Destroy();
 
 }
 
-void ABomb::SetExplosionSize(int size)
+//Call directly after spawning bomb
+//Size should be the bombsize variable in KingOfBombPlayer
+void ABomb::SetExplosionSize(int sizeLevel)
 {
-	bombSize = size;
+	bombSize = 250 * sizeLevel;
 }
 

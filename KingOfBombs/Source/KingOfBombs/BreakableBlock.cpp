@@ -64,6 +64,8 @@ void ABreakableBlock::TakeDamage(int Damage)
 	{
 		int rand2 = FMath::RandRange(0, 3);
 		int rand = FMath::RandRange(0, 7);
+		FVector location = this->GetActorLocation();
+		location.Set(location.X, location.Y, location.Z-90);
 		if (rand2 == 0)
 		{
 			if (rand == 0)
@@ -78,7 +80,7 @@ void ABreakableBlock::TakeDamage(int Damage)
 			}
 			else if (rand == 2)
 			{
-				APowerUp* pup = GetWorld()->SpawnActor<APowerUpBombUp>(MyItemBlueprintInventory, this->GetActorLocation(), this->GetActorRotation());
+				APowerUp* pup = GetWorld()->SpawnActor<APowerUpBombUp>(MyItemBlueprintInventory, location, this->GetActorRotation());
 				//GetWorld()->SpawnActor<APowerUpBombUp>(APowerUpBombUp::StaticClass(), this->GetActorLocation(), this->GetActorRotation());
 			}
 			else if (rand == 3)
@@ -88,17 +90,17 @@ void ABreakableBlock::TakeDamage(int Damage)
 			}
 			else if (rand == 4)
 			{
-				AHazzard* cat = GetWorld()->SpawnActor<ADamageHazzard>(MyItemBlueprintDamageH, this->GetActorLocation(), this->GetActorRotation());
+				AHazzard* cat = GetWorld()->SpawnActor<ADamageHazzard>(MyItemBlueprintDamageH, location, this->GetActorRotation());
 				//GetWorld()->SpawnActor<ADamageHazzard>(ADamageHazzard::StaticClass(), this->GetActorLocation(), this->GetActorRotation());
 			}
 			else if (rand == 5)
 			{
-				AHazzard* cat = GetWorld()->SpawnActor<ASlowDownHazzard>(MyItemBlueprintSlowDownH, this->GetActorLocation(), this->GetActorRotation());
+				AHazzard* cat = GetWorld()->SpawnActor<ASlowDownHazzard>(MyItemBlueprintSlowDownH, location, this->GetActorRotation());
 				//GetWorld()->SpawnActor<ASlowDownHazzard>(ASlowDownHazzard::StaticClass(), this->GetActorLocation(), this->GetActorRotation());
 			}
 			else if (rand == 6)
 			{
-				AHazzard* cat = GetWorld()->SpawnActor<AFreezeHazzard>(MyItemBlueprintFreezeH, this->GetActorLocation(), this->GetActorRotation());
+				AHazzard* cat = GetWorld()->SpawnActor<AFreezeHazzard>(MyItemBlueprintFreezeH, location, this->GetActorRotation());
 			}
 		}
 		

@@ -39,7 +39,7 @@ public:
 
 
 	//Initial Bomb Stats
-	int bombSize = 1;
+	int bombSize = 250;
 	float Radius = 53.0f;
 	float seconds = 3.0;
 	float detonationTime = 3.0;
