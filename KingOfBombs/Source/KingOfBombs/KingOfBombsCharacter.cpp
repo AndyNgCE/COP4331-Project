@@ -83,7 +83,7 @@ void AKingOfBombsCharacter::SpawnBomb()
 	UE_LOG(LogTemp, Warning, TEXT("Spawning Bomb"));
 	FVector Location = this->GetActorLocation() + this->GetActorForwardVector() * 200;
 	ABomb* Bomb = GetWorld()->SpawnActor<ABomb>(CharacterBomb.Get(),Location,this->GetActorRotation());
-	
+	Bomb->SetExplosionSize(explosionRadiusSizeLevel);
 	Bomb->BombMesh->AddImpulse(this->GetActorForwardVector() * 100, NAME_None, true);
 }
 

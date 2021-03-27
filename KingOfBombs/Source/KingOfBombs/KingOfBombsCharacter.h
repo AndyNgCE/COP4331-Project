@@ -79,6 +79,8 @@ public:
 		int MaxHealth = 100;
 	UPROPERTY(BlueprintReadOnly)
 		int NumBombs = 1;
+	UPROPERTY(BlueprintReadOnly)
+		int explosionRadiusSizeLevel = 1;
 
 	//stats
 	int MovementSpeed = 300;
