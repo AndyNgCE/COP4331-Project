@@ -42,6 +42,8 @@ void AbombHitBox::BeginPlay()
 {
 	Super::BeginPlay();
 	SpawnTime = GetWorld()->TimeSeconds;
+	BlastRadius = Radius;
+
 
 	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ExplosionVFX, this->GetActorLocation(), this->GetActorRotation(), FVector(3,3,3));
 }
@@ -50,15 +52,11 @@ void AbombHitBox::BeginPlay()
 void AbombHitBox::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	Collisionbox->SetSphereRadius(BlastRadius);
 	if (GetWorld()->TimeSeconds - SpawnTime > .10f)
 	{
 		Destroy();
 	}
-}
-
-void AbombHitBox::SetOwningBomb(ABomb* Bomb)
-{
-	OwningBomb = Bomb;
 }
 
 //What happens when caught within explosion radius
@@ -121,8 +119,9 @@ void AbombHitBox::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 	
 }
 
+//Call this function directly after spawning hitbox
 void AbombHitBox::ChangeRadius(float size)
 {
-	BlastRadius = size * 100;
-	Collisionbox->SetSphereRadius(BlastRadius);
+	BlastRadius = size;
+	
 }
