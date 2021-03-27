@@ -81,17 +81,40 @@ void AKingOfBombsCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 void AKingOfBombsCharacter::SpawnBomb()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Spawning Bomb"));
-	FVector Location = this->GetActorLocation() + this->GetActorForwardVector() * 200;
-	ABomb* Bomb = GetWorld()->SpawnActor<ABomb>(CharacterBomb.Get(),Location,this->GetActorRotation());
-	Bomb->SetExplosionSize(explosionRadiusSizeLevel);
-	Bomb->BombMesh->AddImpulse(this->GetActorForwardVector() * 100, NAME_None, true);
+	if (Dead) return;
+	if (BombCount > 0)
+	{
+		BombCount--;
+		FVector Location = this->GetActorLocation() + this->GetActorForwardVector() * 200;
+		ABomb* Bomb = GetWorld()->SpawnActor<ABomb>(CharacterBomb.Get(), Location, this->GetActorRotation());
+		Bomb->SetExplosionSize(explosionRadiusSizeLevel);
+		Bomb->BombMesh->AddImpulse(this->GetActorForwardVector() * 100, NAME_None, true);
+	}
+
 }
 
 void AKingOfBombsCharacter::TakeDamage(int Damage)
 {
 	CurrentHealth -= Damage;
-	if(CurrentHealth <= 0)
+	if (CurrentHealth <= 0)
+	{
 		Dead = true;
+		SetActorHiddenInGame(true);
+	}
+		
+}
+
+void AKingOfBombsCharacter::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+	if (GetWorld()->TimeSeconds - BombCounter >= 5 && BombCount < 3)
+	{
+		BombCount++;
+
+		BombCounter = GetWorld()->TimeSeconds;
+
+	}
 }
 
 

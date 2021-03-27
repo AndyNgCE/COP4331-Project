@@ -96,6 +96,14 @@ public:
 	UPROPERTY(BlueprintReadWrite)
 		bool Dead = false;
 
+	UPROPERTY(BlueprintReadOnly)
+	int BombCount = 3;
+
+	float BombCounter = 0;
+
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
 	//void ComsumePowerUp(TSubClassOf<APowerUp> PowerUpClass);
 };
 
