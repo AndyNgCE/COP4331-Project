@@ -58,18 +58,13 @@ void APowerUp::Tick(float DeltaTime)
 void APowerUp::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	// Specifying which actor in the scene can trigger the destroy functions
-	//ABomb* impact = Cast<ABomb>(OtherActor);
 	AKBPlayer* player = Cast<AKBPlayer>(OtherActor);
 		if (player)
 		{
 			OnPick(player);
 			Equipped = true;
-			GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Orange, FString(TEXT("Equipped")));
+			//GEngine->AddOnScreenDebugMessage(-1, 10.0f, FColor::Orange, FString(TEXT("Equipped")));
 		}
-		/*if(impact)
-		{
-			this->AddIgnoredActor(impact);
-		}*/
 		
 }
 
