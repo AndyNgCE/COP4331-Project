@@ -9,4 +9,5 @@ AKBPlayer::AKBPlayer()
 	CurrentHealth = 100;
 	MovementSpeed = 300;
 	NumBombs = 1;
+	explosionRadiusSizeLevel = 1;
 }
