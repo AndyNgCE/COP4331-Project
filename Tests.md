@@ -112,3 +112,18 @@ No | Steps to Reproduce | Expected Behavior
 ## Bomb Pickup - Automated Test
 Expectant behavior:
 On Raycast emitting an collsion with actors (blocks, people, and power-ups), a debug message appears in the top left screen to deatil what actor(s) were hit.
+
+## Player Bombs - Manual Test - Bomb.cpp
+No | Steps to Reproduce | Expected Behavior
+--|--------------|-------------------------
+1 | Press R key on keyboard | Bomb spawns in front of player
+2 | User waits | Bomb turns from red to black and back to red
+3 | User waits | Bombsize variable changes in bomb based on player's explosionRadiusSizeLevel
+4 | User waits | Bombhitbox spawns
+5 | User waits | Emitter spawns showing visual of explosion
+6 | User waits | Bomb changes the hitbox's radius
+7 | User waits | Bomb actor is destroyed
+8 | User waits | If close enough, Player health will decrease
+9 | User waits | If close enough, breakable block health will decrease and get darker
+10 | User waits | If close enough and if breakable block already has low health, breakable block actor gets destroyed
+11 | User waits | If close enough and Player health is low enough, players dies
