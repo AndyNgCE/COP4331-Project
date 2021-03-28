@@ -80,7 +80,7 @@ void ABreakableBlock::TakeDamage(int Damage)
 			}
 			else if (rand == 2)
 			{
-				APowerUp* pup = GetWorld()->SpawnActor<APowerUpBombUp>(MyItemBlueprintInventory, location, this->GetActorRotation());
+				APowerUp* pup = GetWorld()->SpawnActor<APowerUpBombUp>(MyItemBlueprintInventory, this->GetActorLocation(), this->GetActorRotation());
 				//GetWorld()->SpawnActor<APowerUpBombUp>(APowerUpBombUp::StaticClass(), this->GetActorLocation(), this->GetActorRotation());
 			}
 			else if (rand == 3)
