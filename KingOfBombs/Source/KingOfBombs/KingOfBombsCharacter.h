@@ -36,9 +36,11 @@ protected:
 	void OnResetVR();
 
 	/** Called for forwards/backward input */
+	UFUNCTION(BlueprintCallable)
 	void MoveForward(float Value);
 
 	/** Called for side to side input */
+	UFUNCTION(BlueprintCallable)
 	void MoveRight(float Value);
 
 	/** 
@@ -85,6 +87,7 @@ public:
 	//stats
 	int MovementSpeed = 300;
 
+	UFUNCTION(BlueprintCallable)
 	void SpawnBomb();
 
 	UPROPERTY(EditDefaultsOnly)

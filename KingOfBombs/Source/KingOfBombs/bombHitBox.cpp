@@ -109,6 +109,13 @@ void AbombHitBox::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 					block->TakeDamage(25);
 				}
 			}
+			else if (OtherActor->IsA<ABomb>())
+			{
+				if (ABomb* bomb = Cast<ABomb>(OtherActor))
+				{
+					bomb->Explosion();
+				}
+			}
 		}
 		if (OtherActor->IsA<AKingOfBombsCharacter>())
 		{

@@ -13,7 +13,7 @@ void APowerUpBombUp::OnPick(AKBPlayer* target)
 	if (target != nullptr)
 	{
 		// Increase inventory
-		target->NumBombs++;
+		target->BombCount++;
 		// Disables collision components
 		SetActorEnableCollision(false);
 		SetActorHiddenInGame(true);

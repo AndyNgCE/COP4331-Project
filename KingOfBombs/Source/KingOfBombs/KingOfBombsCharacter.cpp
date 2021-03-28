@@ -8,7 +8,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
-
+#include "GhostBomb.h"
 //////////////////////////////////////////////////////////////////////////
 // AKingOfBombsCharacter
 
@@ -52,43 +52,55 @@ AKingOfBombsCharacter::AKingOfBombsCharacter()
 
 void AKingOfBombsCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
-	// Set up gameplay key bindings
-	check(PlayerInputComponent);
-	//PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	//PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	//// Set up gameplay key bindings
+	//check(PlayerInputComponent);
+	////PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
+	////PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
-	PlayerInputComponent->BindAxis("MoveForward", this, &AKingOfBombsCharacter::MoveForward);
-	PlayerInputComponent->BindAxis("MoveRight", this, &AKingOfBombsCharacter::MoveRight);
+	//PlayerInputComponent->BindAxis("MoveForward", this, &AKingOfBombsCharacter::MoveForward);
+	//PlayerInputComponent->BindAxis("MoveRight", this, &AKingOfBombsCharacter::MoveRight);
 
-	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
-	// "turn" handles devices that provide an absolute delta, such as a mouse.
-	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
-	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
-	PlayerInputComponent->BindAxis("TurnRate", this, &AKingOfBombsCharacter::TurnAtRate);
-	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
-	PlayerInputComponent->BindAxis("LookUpRate", this, &AKingOfBombsCharacter::LookUpAtRate);
+	//// We have 2 versions of the rotation bindings to handle different kinds of devices differently
+	//// "turn" handles devices that provide an absolute delta, such as a mouse.
+	//// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
+	//PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+	//PlayerInputComponent->BindAxis("TurnRate", this, &AKingOfBombsCharacter::TurnAtRate);
+	//PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+	//PlayerInputComponent->BindAxis("LookUpRate", this, &AKingOfBombsCharacter::LookUpAtRate);
 
-	// handle touch devices
-	PlayerInputComponent->BindTouch(IE_Pressed, this, &AKingOfBombsCharacter::TouchStarted);
-	PlayerInputComponent->BindTouch(IE_Released, this, &AKingOfBombsCharacter::TouchStopped);
+	//// handle touch devices
+	//PlayerInputComponent->BindTouch(IE_Pressed, this, &AKingOfBombsCharacter::TouchStarted);
+	//PlayerInputComponent->BindTouch(IE_Released, this, &AKingOfBombsCharacter::TouchStopped);
 
-	// VR headset functionality
-	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AKingOfBombsCharacter::OnResetVR);
+	//// VR headset functionality
+	//PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AKingOfBombsCharacter::OnResetVR);
 
-	PlayerInputComponent->BindAction("SpawnBomb", IE_Pressed, this, &AKingOfBombsCharacter::SpawnBomb);
+	//PlayerInputComponent->BindAction("SpawnBomb", IE_Pressed, this, &AKingOfBombsCharacter::SpawnBomb);
 }
 
 void AKingOfBombsCharacter::SpawnBomb()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Spawning Bomb"));
-	if (Dead) return;
+
 	if (BombCount > 0)
 	{
-		BombCount--;
-		FVector Location = this->GetActorLocation() + this->GetActorForwardVector() * 200;
-		ABomb* Bomb = GetWorld()->SpawnActor<ABomb>(CharacterBomb.Get(), Location, this->GetActorRotation());
-		Bomb->SetExplosionSize(explosionRadiusSizeLevel);
-		Bomb->BombMesh->AddImpulse(this->GetActorForwardVector() * 100, NAME_None, true);
+		if (!Dead)
+		{
+			BombCount--;
+			FVector Location = this->GetActorLocation() + this->GetActorForwardVector() * 200;
+			ABomb* Bomb = GetWorld()->SpawnActor<ABomb>(CharacterBomb.Get(), Location, this->GetActorRotation());
+			Bomb->SetExplosionSize(explosionRadiusSizeLevel);
+			Bomb->BombMesh->AddImpulse(this->GetActorForwardVector() * 100, NAME_None, true);
+		}
+		else
+		{
+			BombCount--;
+			FVector Location = this->GetActorLocation() + this->GetActorForwardVector() * 200;
+			AGhostBomb* Bomb = GetWorld()->SpawnActor<AGhostBomb>(AGhostBomb::StaticClass(), Location, this->GetActorRotation());
+			Bomb->SetExplosionSize(explosionRadiusSizeLevel);
+			Bomb->BombMesh->AddImpulse(this->GetActorForwardVector() * 100, NAME_None, true);
+		}
+	
 	}
 
 }
