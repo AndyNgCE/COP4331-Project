@@ -104,10 +104,9 @@ No | Steps to Reproduce | Expected Behavior
 No | Steps to Reproduce | Expected Behavior
 --|--------------|-------------------------
 1 | Click to play button  | It will open the map
-2 | Click to Settings button | It will chance the game setings
-3 | Click to Tutorial button | It will show the Tutorial page and Tutorial game mode
-4 | Click to Quit button | It will Quit the game
-5 | Settings and Tutorial pages has back button| It will open the main menu again
+2 | Click to Tutorial button | It will show the Tutorial page and Tutorial game mode
+3 | Click to Quit button | It will Quit the game
+4 | Settings and Tutorial pages has back button| It will open the main menu again
 
 ## Bomb Pickup - Automated Test
 Expectant behavior:
