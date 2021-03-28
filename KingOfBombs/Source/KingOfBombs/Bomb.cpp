@@ -73,5 +73,9 @@ void ABomb::SetExplosionSize(int sizeLevel)
 	{
 		bombSize = 250 * sizeLevel;
 	}
+	else
+	{
+		bombSize = 750;
+	}
 }
 
