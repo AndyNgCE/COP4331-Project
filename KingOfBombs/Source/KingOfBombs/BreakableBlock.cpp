@@ -14,45 +14,45 @@
 ABreakableBlock::ABreakableBlock()
 {
 	health = 100;
-	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprint(TEXT("Blueprint'/Game/Blueprints/Health.Health'"));
-	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprintMovement(TEXT("Blueprint'/Game/Blueprints/Movement.Movement'"));
-	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprintInventory(TEXT("Blueprint'/Game/Blueprints/InventoryUp.InventoryUp'"));
-	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprintBlast(TEXT("Blueprint'/Game/Blueprints/BlastIncrease.BlastIncrease'"));
+	ConstructorHelpers::FObjectFinder<UClass>ItemBlueprint(TEXT("Blueprint'/Game/Blueprints/Health.Health_C'"));
+	ConstructorHelpers::FObjectFinder<UClass>ItemBlueprintMovement(TEXT("Blueprint'/Game/Blueprints/Movement.Movement_C'"));
+	ConstructorHelpers::FObjectFinder<UClass>ItemBlueprintInventory(TEXT("Blueprint'/Game/Blueprints/InventoryUp.InventoryUp_C'"));
+	ConstructorHelpers::FObjectFinder<UClass>ItemBlueprintBlast(TEXT("Blueprint'/Game/Blueprints/BlastIncrease.BlastIncrease_C'"));
 
-	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprintDamageH(TEXT("Blueprint'/Game/Blueprints/MyDamageHazzard.MyDamageHazzard'"));
-	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprintFreezeH(TEXT("Blueprint'/Game/Blueprints/MyFreezeHazzard.MyFreezeHazzard'"));
-	ConstructorHelpers::FObjectFinder<UBlueprint>ItemBlueprintSlowDownH(TEXT("Blueprint'/Game/Blueprints/MySlowDownHazzard.MySlowDownHazzard'"));
+	ConstructorHelpers::FObjectFinder<UClass>ItemBlueprintDamageH(TEXT("Blueprint'/Game/Blueprints/MyDamageHazzard.MyDamageHazzard_C'"));
+	ConstructorHelpers::FObjectFinder<UClass>ItemBlueprintFreezeH(TEXT("Blueprint'/Game/Blueprints/MyFreezeHazzard.MyFreezeHazzard_C'"));
+	ConstructorHelpers::FObjectFinder<UClass>ItemBlueprintSlowDownH(TEXT("Blueprint'/Game/Blueprints/MySlowDownHazzard.MySlowDownHazzard_C'"));
 
 	// Power-Up blueprints call
 	if (ItemBlueprint.Object)
 	{
-		MyItemBlueprint = (UClass*)ItemBlueprint.Object->GeneratedClass;
+		MyItemBlueprint = (UClass*)ItemBlueprint.Object;
 	}
 	if (ItemBlueprintMovement.Object)
 	{
-		MyItemBlueprintMovement = (UClass*)ItemBlueprintMovement.Object->GeneratedClass;
+		MyItemBlueprintMovement = (UClass*)ItemBlueprintMovement.Object;
 	}
 	if (ItemBlueprintInventory.Object)
 	{
-		MyItemBlueprintInventory = (UClass*)ItemBlueprintInventory.Object->GeneratedClass;
+		MyItemBlueprintInventory = (UClass*)ItemBlueprintInventory.Object;
 	}
 	if (ItemBlueprintBlast.Object)
 	{
-		MyItemBlueprintBlast = (UClass*)ItemBlueprintBlast.Object->GeneratedClass;
+		MyItemBlueprintBlast = (UClass*)ItemBlueprintBlast.Object;
 	}
 
 	// Hazzard blueprints call
 	if (ItemBlueprintDamageH.Object)
 	{
-		MyItemBlueprintDamageH = (UClass*)ItemBlueprintDamageH.Object->GeneratedClass;
+		MyItemBlueprintDamageH = (UClass*)ItemBlueprintDamageH.Object;
 	}
 	if (ItemBlueprintFreezeH.Object)
 	{
-		MyItemBlueprintFreezeH = (UClass*)ItemBlueprintFreezeH.Object->GeneratedClass;
+		MyItemBlueprintFreezeH = (UClass*)ItemBlueprintFreezeH.Object;
 	}
 	if (ItemBlueprintSlowDownH.Object)
 	{
-		MyItemBlueprintSlowDownH = (UClass*)ItemBlueprintSlowDownH.Object->GeneratedClass;
+		MyItemBlueprintSlowDownH = (UClass*)ItemBlueprintSlowDownH.Object;
 	}
 }
 
