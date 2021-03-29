@@ -166,5 +166,21 @@ Jordan Edelman (Joredelma) - Worked on Freeze hazard; Audio Recording
 
 
 # Sprint 8
+[Trello Board](https://trello.com/b/QNCct5eq/king-of-bombs)\
+[Burndown Chart](https://docs.google.com/spreadsheets/d/1gm_f-vUzZZCiSdAiL_RMUmfzK9DZ8on1/edit#gid=1264628026)\
+[Velocity Chart](https://docs.google.com/spreadsheets/d/1KRNAfiRvPILEtd5-9JKQYyp52EXsUcwrr4NSR5S0dHY/edit?usp=sharing)\
+[System Architecture](https://github.com/AndyNgCE/COP4331-Project/blob/main/artifact/DesignDocument.md)\
+[Source Code](https://github.com/AndyNgCE/COP4331-Project/tree/main/KingOfBombs/Source/KingOfBombs)\
+[Tests](https://github.com/AndyNgCE/COP4331-Project/blob/main/Tests.md)\
+[Demonstration](https://youtu.be/kAsCC23uPnE)
 
 # Task Allocation
+Zach (ZachKuj) - Player integration; Game mode creation, Material decoration; Camera Manipulation; Packaging.
+
+Andy Nguyen (AndyNgCE) - Blueprint for material of Power-ups to set regular appearance between instances; Intergration
+
+Gabriel Barcenas (Gbarc1002) - Raycast bomb emmittance; Player damage; Intergration
+
+Tevfik Koyun (tevfikkoyun) - Working on UI; UI debugging; Intergration 
+
+Jordan Edelman (Joredelma) - Worked on Freeze hazard; Intergration
