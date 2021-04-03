@@ -20,7 +20,7 @@ void AGhostBomb::Tick(float DeltaTime)
 
 	if (detonationCounter >= detonationTime)
 	{
-		Explosion();
+		FakeExplosion();
 	}
 }
 
