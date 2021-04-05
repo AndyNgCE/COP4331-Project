@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Bomb.h"
-#include "GhostBomb.h"
 #include "KingOfBombsCharacter.generated.h"
 
 UCLASS(config=Game)
@@ -93,9 +92,6 @@ public:
 
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<ABomb> CharacterBomb;
-
-	UPROPERTY(EditDefaultsOnly)
-	TSubclassOf<AGhostBomb> MyFakeBomb;
 
 	UFUNCTION(BlueprintCallable)
 	void TakeDamage(int Damage);
