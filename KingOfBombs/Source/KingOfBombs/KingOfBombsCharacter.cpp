@@ -7,13 +7,20 @@
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
-#include "GameFramework/SpringArmComponent.h"
 #include "GhostBomb.h"
+#include "GameFramework/SpringArmComponent.h"
+
 //////////////////////////////////////////////////////////////////////////
 // AKingOfBombsCharacter
 
 AKingOfBombsCharacter::AKingOfBombsCharacter()
 {
+	ConstructorHelpers::FObjectFinder<UClass>FakeBomb(TEXT("Blueprint'/Game/Blueprints/PlayerBomb_GhostBomb.PlayerBomb_GhostBomb'"));
+	if (FakeBomb.Object)
+	{
+		MyFakeBomb = (UClass*)FakeBomb.Object;
+	}
+
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
@@ -96,9 +103,9 @@ void AKingOfBombsCharacter::SpawnBomb()
 		{
 			BombCount--;
 			FVector Location = this->GetActorLocation() + this->GetActorForwardVector() * 200;
-			AGhostBomb* Bomb = GetWorld()->SpawnActor<AGhostBomb>(AGhostBomb::StaticClass(), Location, this->GetActorRotation());
-			Bomb->SetExplosionSize(explosionRadiusSizeLevel);
-			Bomb->BombMesh->AddImpulse(this->GetActorForwardVector() * 100, NAME_None, true);
+			AGhostBomb* Bomb = GetWorld()->SpawnActor<AGhostBomb>(MyFakeBomb.Get(), Location, this->GetActorRotation());
+			//Bomb->SetExplosionSize(explosionRadiusSizeLevel);
+			//Bomb->BombMesh->AddImpulse(this->GetActorForwardVector() * 100, NAME_None, true);
 		}
 	
 	}
